@@ -4,9 +4,16 @@ body {
   margin: 0;
 }
 
+.sidebar-color {
+  background-color: #f8f8fc;
+  opacity: 0.9;
+  background-image: radial-gradient(#444cf7 0.5px, #f4f4ff 0.5px);
+  background-size: 10px 10px;
+}
+
 #sidebar {
   height: 100%;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   color: #000000;
   transition: margin-left 0.3s;
   text-align: center;
@@ -20,6 +27,8 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+
 
 #content {
   transition: margin-left 0.3s;
@@ -38,7 +47,7 @@ body {
 }
 
 #sidebar .list-group-item {
-  background-color: aliceblue;
+  background-color: rgba(255, 255, 255, 0);
   color: #000000;
   border: none;
   text-align: left;
@@ -92,12 +101,14 @@ body {
   /* font-family: 'Lato', sans-serif; */
   font-family: 'GFS Didot';
   text-align: justify;
+  color: #575757;
 }
 
 .about_card {
   margin-bottom: 3px;
   background-color: rgb(240, 240, 240);
   border: none;
+  color: #464646;
 }
 
 .edu_card {
@@ -124,13 +135,14 @@ body {
   line-height: 1;
   /* margin: 2px; */
   padding: 3px;
+  color: #464646;
 }
 
 .author_name {
   background-color: rgb(221, 221, 221);
   padding: 3px;
   display: inline-block;
-  color: rgb(0, 0, 0);
+  color: #464646;
   margin-right: 2px;
   border-radius: 8px;
   margin-bottom: 2px;
@@ -147,7 +159,7 @@ body {
   display: inline-block;
   border-radius: 8px;
   /* background-color: rgb(255, 216, 216); */
-  color: rgb(0, 0, 0);
+  color: #464646;
 }
 
 .journal_name_span {
@@ -417,7 +429,4 @@ body {
   }
 
   /* card end */
-
-
-
 }
