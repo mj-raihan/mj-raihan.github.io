@@ -138,7 +138,7 @@ body {
   font-size: 20pt;
   /* margin-bottom: 3px;  */
   font-family: 'GFS Didot';
-  line-height: 1;
+  line-height: 1.1;
   /* margin: 2px; */
   padding: 3px;
   color: #464646;
@@ -442,7 +442,7 @@ body {
 
   /* card start */
   .default_card_text {
-    font-size: 13pt;
+    font-size: 11pt;
   }
 
   .reference_card_text {
@@ -450,8 +450,17 @@ body {
   }
 
   .publication_title {
-    margin-top: 5px;
-    font-size: 16pt;
+    margin-top: 10px;
+    font-size: 14pt;
+    line-height: 1.1; 
+  }
+
+  .author_name {
+    font-size: 11pt;
+  }
+
+  .journal_name {
+    font-size: 14px;
   }
 
   /* card end */
