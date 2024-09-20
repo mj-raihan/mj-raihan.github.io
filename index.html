@@ -20,6 +20,7 @@
   <link rel="stylesheet" type="text/css" href="topic_style.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
 </head>
 
@@ -72,14 +73,14 @@
 
     <!-- Hamburger Menu -->
     <div id="menu-toggle">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars "></i>
       <!-- hamberger bar -->
 
     </div>
 
     <!-- Close Menu Button (Added) -->
     <div id="menu-close" style="display: none;">
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times" ></i>
     </div>
 
     <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
@@ -150,74 +151,33 @@
       </div>
       <!-- contact stop -->
       <br>
-      <!-- news start -->
-      <div>
-        <h1 style="font-family: Perpetua, serif;">Events & Awards</h1>
-      </div>
-      <div class="slideshow_container" onmouseover="stopSlide()" onmouseout="startSlide()">
-        <div class="slides">
-          <div class="slide"
-            style="background-image: url('https://www.dropbox.com/scl/fi/nm6q4malx1ztykgkuh8kl/4.jpg?rlkey=759tex5e9xhxvlvghx5l33fs9&raw=1');">
-            <div class="blur_img">
-              <center><img
-                  src="https://www.dropbox.com/scl/fi/nm6q4malx1ztykgkuh8kl/4.jpg?rlkey=759tex5e9xhxvlvghx5l33fs9&raw=1"
-                  alt="Slide 1" class="slide_img"></center>
-            </div>
-            <div class="blur_text">
-              <div class="caption_text">Best Paper Award at ICIEV & icIVPR conferences - 2021</div>
-            </div>
-          </div>
 
-          <div class="slide"
-            style="background-image: url('https://www.dropbox.com/scl/fi/y8i65dddxg0o68p3zyf71/5.jpg?rlkey=dj5nlu7uboz39d7z2es6rhr1v&raw=1');">
-            <div class="blur_img">
-              <center><img
-                  src="https://www.dropbox.com/scl/fi/y8i65dddxg0o68p3zyf71/5.jpg?rlkey=dj5nlu7uboz39d7z2es6rhr1v&raw=1"
-                  alt="Slide 2" class="slide_img"></center>
-            </div>
-            <div class="blur_text">
-              <div class="caption_text">App idea Award at MOBILE APP GAME & JOB Festival 2023, ICT, Bangladesh.</div>
-            </div>
-          </div>
 
-          <div class="slide"
-            style="background-image: url('https://www.dropbox.com/scl/fi/9cji9qap7dcfytiuqf6cw/6.jpg?rlkey=66i7hgu7cg1f4j507jlleja0f&raw=1');">
-            <div class="blur_img">
-              <center><img
-                  src="https://www.dropbox.com/scl/fi/9cji9qap7dcfytiuqf6cw/6.jpg?rlkey=66i7hgu7cg1f4j507jlleja0f&raw=1"
-                  alt="Slide 3" class="slide_img"></center>
-            </div>
-            <div class="blur_text" ">
-              <div class=" caption_text">App idea Award at MOBILE APP GAME & JOB Festival 2023, ICT, Bangladesh.</div>
-          </div>
-        </div>
-
-        <!-- item -->
-        <div class="slide"
-          style="background-image: url('https://www.dropbox.com/scl/fi/uhy6e7fci3iqkymeme6rx/7.jpg?rlkey=oahjw87rgf92hwehu5wip0pow&raw=1');">
-          <div class="blur_img">
-            <center><img
-                src="https://www.dropbox.com/scl/fi/uhy6e7fci3iqkymeme6rx/7.jpg?rlkey=oahjw87rgf92hwehu5wip0pow&raw=1"
-                alt="Slide 3" class="slide_img"></center>
-          </div>
-          <div class="blur_text">
-            <div class="caption_text">Regional Champion NASA Space App Challenge (Team Storm Trooper) - 2023</div>
-          </div>
-        </div>
-
-        <!-- Add more slides as needed -->
-      </div>
-
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <!-- image carousel start -->
+    <div>
+      <h1 style="font-family: Perpetua, serif;">Events & Awards</h1>
     </div>
-
-
-    <!-- news stop -->
     <br>
+    <div id="image-carousel" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="https://www.dropbox.com/scl/fi/g62s7pw3caqd0mnog3hfd/Slide1.PNG?rlkey=fqj77fx2onerujzuav59j65lm&st=qszmjn8t&raw=1" alt="Image 1">
+          </li>
+          <li class="splide__slide">
+            <img src="https://www.dropbox.com/scl/fi/3jvuzciq4krg3jqe39gxf/Slide2.PNG?rlkey=33pqc32fils5g4oxt69lihpd9&st=q5wb8rj3&raw=1" alt="Image 2">
+          </li>
+          <li class="splide__slide">
+            <img src="https://www.dropbox.com/scl/fi/9vphlc4nbgy3hidlhz9eq/Slide3.PNG?rlkey=rixspfqcie4uo47a13p3aekkh&st=10s42t37&raw=1" alt="Image 3">
+          </li>
+          <li class="splide__slide">
+            <img src="https://www.dropbox.com/scl/fi/vzccvixws5chmok0tpi5f/Slide4.PNG?rlkey=d2d3uicbxpklq4urw1t40rui0&st=wkqet0dz&raw=1" alt="Image 4">
+          </li>
+        </ul>
+      </div>
+    </div>
     <br>
-    <br>
-    <!-- <br> -->
+    <!-- image carousel end -->
 
 
     <!-- Edxperiance -->
@@ -326,6 +286,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script src="scripts.js"></script>
   <script>
     function showContent(contentId) {

@@ -5,12 +5,29 @@ document.addEventListener('DOMContentLoaded', function() {
       // once: true 
   });
 });
+
 let scrollRef = 0;
 
 window.addEventListener('scroll', function() {
   scrollRef <= 10 ? scrollRef++ : AOS.refresh();
 });
 // zoom in scroll end
+
+// carousel start
+document.addEventListener('DOMContentLoaded', function () {
+  var splide = new Splide('#image-carousel', {
+    type      : 'loop',      // Carousel mode
+    perPage   : 1,           // Show 1 image at a time
+    autoplay  : true,        // Enable autoplay
+    interval  : 3000,        // Delay between transitions (3 seconds)
+    pauseOnHover: true,      // Pause autoplay on mouse hover
+    arrows    : true,        // Show manual arrows for next/prev control
+    pagination: true,        // Show pagination (dots for each slide)
+  });
+
+  splide.mount();
+});
+// carousel end
 
 // active tab sign
 
@@ -112,44 +129,6 @@ function updateIcon(isDarkMode) {
 
 // Function to check OS dark mode preference end
 // dark mode end
-
-// news start
-let slideIndex = 1;
-let slideInterval;
-
-function changeSlide(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides() {
-  let i;
-  const slides = document.getElementsByClassName("slide");
-
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  } else if (slideIndex < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-}
-
-function startSlide() {
-  slideInterval = setInterval(function () {
-    changeSlide(1);
-  }, 4000);
-}
-
-function stopSlide() {
-  clearInterval(slideInterval);
-}
-changeSlide(1)
-startSlide(); // Start the automatic sliding initially
-// news stop
 
 // clipboard copy text start
 function copyToClipboard(text) {

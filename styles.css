@@ -64,8 +64,9 @@ body {
   border-left: 4px solid #0056b3;
   /* Change the border color as needed */
 }
+
 .list-unstyled.components li {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 /* top hamberger color bar */
@@ -188,82 +189,38 @@ body {
 
 /* card end */
 
+/* carousel start */
 
-/* news start */
-.slideshow_container {
-  position: relative;
-  max-width: 50em;
-  max-height: 30em;
-  margin: auto;
+
+#image-carousel {
+  max-width: 75%;
+  /* Set your preferred max width */
+  margin: 0 auto;
+  /* Center the carousel on the page */
 }
 
-.slides {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
+.splide__track {
+  height: 60%;
+  /* Adjust to desired height */
 }
 
-.slide_img {
-  width: 100%;
-  max-height: 30em;
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure the images maintain aspect ratio and don't overflow */
+.splide__slide img {
+  max-width: 100%;
+  /* Image scales down but keeps ratio */
+  max-height: 100%;
+  /* Image scales to fit the container */
   object-fit: contain;
+  /* Ensure the entire image is visible without distortion */
 }
 
-.slide {
-  display: none;
-  background-size: cover;
-  width: 100%;
-  max-height: 30em;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.blur_img {
-  backdrop-filter: blur(40px);
-  /* z-index: -1;  */
-}
-
-.blur_text {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  /* background-image: inherit; */
-  /* background-size: cover; */
-  border-radius: 10px;
-  /* box-sizing: border-box; */
-  opacity: 0.9;
-  background-color: #d2eeff00;
-  font-family: 'Raleway', sans-serif;
-}
-
-.caption_text {
-  color: #000000;
-  text-align: center;
-  padding: 8px;
-  border-radius: 10px;
-  /* mix-blend-mode:difference;  */
-  font-size: 17pt;
-  backdrop-filter: blur(80px);
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-/* news end */
+/* carousel end */
 
 /* dark mode */
 #toggleDarkMode {
@@ -409,40 +366,6 @@ body {
     opacity: 0.9;
   }
 
-  /* news start */
-  .slideshow_container {
-    position: relative;
-    max-width: 30em;
-    max-height: 20em;
-    margin: auto;
-  }
-
-  .slide_img {
-    width: 100%;
-    max-height: 20em;
-    object-fit: contain;
-  }
-
-  .slide {
-    display: none;
-    background-size: cover;
-    width: 100%;
-    max-height: 20em;
-  }
-
-  .caption_text {
-    font-size: 13pt;
-    padding: 3px;
-  }
-
-  .prev,
-  .next {
-    display: block;
-    /* Show arrows on small screens */
-  }
-
-  /* news stop */
-
   /* card start */
   .default_card_text {
     font-size: 11pt;
@@ -455,7 +378,7 @@ body {
   .publication_title {
     margin-top: 10px;
     font-size: 14pt;
-    line-height: 1.1; 
+    line-height: 1.1;
   }
 
   .author_name {
@@ -465,6 +388,28 @@ body {
   .journal_name {
     font-size: 14px;
   }
+
+  /* carousel start */
+  #image-carousel {
+    max-width: 95%;
+    /* Set your preferred max width */
+    margin: 0 auto;
+    /* Center the carousel on the page */
+  }
+
+  .splide__track {
+    height: 90%;
+    /* Adjust to desired height */
+  }
+
+  /* carousel end */
+
+  /* contact button start */
+  .contact-button {
+    font-size: 12px;
+  }
+
+  /* contact button end */
 
   /* card end */
 }
