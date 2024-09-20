@@ -64,6 +64,9 @@ body {
   border-left: 4px solid #0056b3;
   /* Change the border color as needed */
 }
+.list-unstyled.components li {
+  margin-bottom: 15px;
+}
 
 /* top hamberger color bar */
 .color-bar {
