@@ -1,25 +1,16 @@
-// function showContent(contentId) {
+// zoom in scroll start
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init({
+      duration: 500,
+      // once: true 
+  });
+});
+let scrollRef = 0;
 
-//   if (String(contentId) !== "home") {
-//     $(".slideshow_container").css("display", "none");
-//   }
-//   if (String(contentId) === "home") {
-//     // $(".container").hide();
-//     $("#" + contentId).fadeIn();
-//     // $("#sidebar a").removeClass("active"); // Remove active class from all tabs
-//     $("#" + contentId + "-tab").addClass("active"); // Add active class to the selected tab
-//     $(".slideshow_container").css("display", "block");
-//   }
-//   if (String(contentId) === "topic_1") {
-//     $("#" + 'contentContainer').fadeIn();
-//     $(document).ready(function () {
-//       // Load content from another HTML file into the specified div
-//       $("#contentContainer").load("topic_1.html");
-
-//     });
-//   }
-//   hideSidebar(); // Hide the sidebar after clicking a component
-// }
+window.addEventListener('scroll', function() {
+  scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+});
+// zoom in scroll end
 
 // active tab sign
 

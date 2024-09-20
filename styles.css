@@ -117,6 +117,12 @@ body {
   border: none;
 }
 
+.cv_card {
+  margin-bottom: 10px;
+  background-color: #f0f0ff;
+  border: none;
+}
+
 .exp_card {
   margin-bottom: 10px;
   background-color: rgb(236, 245, 248);
@@ -205,6 +211,7 @@ body {
   background-size: cover;
   width: 100%;
   max-height: 30em;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .blur_img {
@@ -221,7 +228,7 @@ body {
   border-radius: 10px;
   /* box-sizing: border-box; */
   opacity: 0.9;
-  background-color: #d2eeff;
+  background-color: #d2eeff00;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -231,7 +238,7 @@ body {
   padding: 8px;
   border-radius: 10px;
   /* mix-blend-mode:difference;  */
-  font-size: 20pt;
+  font-size: 17pt;
   backdrop-filter: blur(80px);
 }
 
