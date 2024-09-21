@@ -104,7 +104,7 @@ body {
   font-size: 14pt;
   /* font-family: 'Lato', sans-serif; */
   font-family: 'GFS Didot';
-  text-align: justify;
+  /* text-align: justify; */
   color: #575757;
 }
 
@@ -388,6 +388,12 @@ body {
   .journal_name {
     font-size: 14px;
   }
+
+  .card_button {
+    font-size: 15px;
+  }
+
+  /* card end */
 
   /* carousel start */
   #image-carousel {
