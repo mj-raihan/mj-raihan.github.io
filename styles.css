@@ -238,8 +238,8 @@ body {
 
 .tiles_container img {
   width: 84px;
-  /* height: 96px; */
-  height: auto;
+  height: 74px;
+  /* height: auto; */
   padding-right: 10px;
   /* border: 1px solid #ccc; */
   /* object-fit: cover; */
@@ -589,6 +589,7 @@ body {
     font-size: 11pt;
   }
   /* lateset news end */
+
 /* tiles image start */
 .tiles_container p {
   font-size: 11pt;
