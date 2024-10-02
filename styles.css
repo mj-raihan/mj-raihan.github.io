@@ -249,7 +249,7 @@ body {
 
 .tiles_container p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 13pt;
   line-height: 1.2; 
 }
 /* tiles image end */
@@ -588,5 +588,11 @@ body {
   .news-container {
     font-size: 11pt;
   }
-  /* lateset news start */
+  /* lateset news end */
+/* tiles image start */
+.tiles_container p {
+  font-size: 11pt;
+}
+/* tiles image end */
+
 }
