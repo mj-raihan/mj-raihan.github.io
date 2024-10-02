@@ -209,7 +209,7 @@ body {
 
 .edu_card {
   margin-bottom: 10px;
-  background-color: rgb(238, 250, 237);
+  background-color: rgba(142, 255, 210, 0.167);
   border: none;
 }
 
@@ -221,7 +221,7 @@ body {
 
 .exp_card {
   margin-bottom: 10px;
-  background-color: rgb(236, 245, 248);
+  background-color: rgba(160, 244, 255, 0.203);
   border: none;
 }
 
