@@ -1,14 +1,27 @@
+:root {
+  --hover-color: rgba(138, 214, 255, 0.602);
+  --common-background: rgb(240, 240, 240, 0.4)
+}
+
 body {
   background-color: #f8f9fa;
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
-.sidebar-color {
+/* .sidebar-color {
   background-color: #f8f8fc;
   opacity: 0.9;
   background-image: radial-gradient(#444cf7 0.5px, #f4f4ff 0.5px);
   background-size: 10px 10px;
+} */
+
+.sidebar-color {
+  background-color: #ffffff;
+  background-image: linear-gradient(135deg, #f5f5f9 25%, #fafafe 25%, #fafafe 50%, #f5f5f9 50%, #f5f5f9 75%, #fafafe 75%, #fafafe 100%);
+  background-size: 20px 20px;
+  border-right: 1px solid #eaeaea;
+  box-shadow: 1px 0 8px rgba(0, 0, 0, 0.05);
 }
 
 #sidebar {
@@ -56,12 +69,12 @@ body {
 }
 
 #sidebar .list-group-item:hover {
-  background-color: lightskyblue;
+  background-color: var(--hover-color);
 }
 
 #sidebar .list-group-item.active {
-  background-color: #80b0ea;
-  border-left: 4px solid #0056b3;
+  background-color: #80d0ea;
+  border-left: 4px solid #0086b3;
   /* Change the border color as needed */
 }
 
@@ -123,7 +136,8 @@ body {
 
 /* Styling each news item */
 .news-item {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
+  margin-left: 12px;
   /* Spacing between news items */
 }
 
@@ -131,6 +145,7 @@ body {
 .news-item .date {
   font-weight: bold;
   color: #333;
+  
 }
 
 /* News description */
@@ -153,13 +168,14 @@ body {
 
 /* Hover effect for the news item */
 .news-item:hover {
-  background-color: rgb(235, 187, 255);
+  background-color: var(--hover-color);
   /* Change background color on hover */
 }
 
 .news_card {
   margin-bottom: 10px;
-  background-color: rgba(242, 223, 250, 0.403);
+  /* background-color: rgba(242, 223, 250, 0.403); */
+  background-color: var(--common-background);
   border: none;
 }
 
@@ -188,7 +204,7 @@ body {
 
 .contact-button:hover {
   /*formatting goes here*/
-  background-color: rgb(138, 208, 255);
+  background-color: var(--hover-color);
   color: #000000;
 }
 
@@ -209,19 +225,19 @@ body {
 
 .edu_card {
   margin-bottom: 10px;
-  background-color: rgba(142, 255, 210, 0.167);
+  background-color: var(--common-background);
   border: none;
 }
 
 .cv_card {
   margin-bottom: 10px;
-  background-color: #f0f0ff;
+  background-color: var(--common-background);
   border: none;
 }
 
 .exp_card {
   margin-bottom: 10px;
-  background-color: rgba(160, 244, 255, 0.203);
+  background-color: var(--common-background);
   border: none;
 }
 
@@ -356,15 +372,6 @@ body {
 
 /* dark mode start */
 
-/* dark sidebar bg start */
-.dark-mode .sidebar-color {
-  background-color: #ffffff;
-  opacity: 0.9;
-  background-image: radial-gradient(#444cf7 0.5px, #3b3b3be4 0.5px);
-  background-size: 10px 10px;
-}
-
-/* dark sidebar bg end */
 
 .dark-mode {
   background-color: #222;
@@ -383,6 +390,16 @@ body {
   background-color: #333;
   color: #fff;
 }
+
+/* dark sidebar bg start */
+.dark-mode .sidebar-color {
+  background-color: #1a1b1e;
+  background-image: linear-gradient(135deg, #212226 25%, #1d1e22 25%, #1d1e22 50%, #212226 50%, #212226 75%, #1d1e22 75%, #1d1e22 100%);
+  background-size: 20px 20px;
+  border-right: 1px solid #2a2b2f;
+  box-shadow: 1px 0 8px rgba(0, 0, 0, 0.2);
+}
+/* dark sidebar bg end */
 
 .dark-mode #sidebar {
   background-color: #333;
