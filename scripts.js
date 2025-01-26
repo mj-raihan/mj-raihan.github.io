@@ -86,6 +86,48 @@ $(document).ready(function () {
 
 // popup end
 
+// mini card start
+ const scrollContainer = document.getElementById("scrollContainer");
+
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+
+    scrollContainer.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+      scrollContainer.style.cursor = "grabbing";
+    });
+
+    scrollContainer.addEventListener("mouseleave", () => {
+      isDragging = false;
+      scrollContainer.style.cursor = "grab";
+    });
+
+    scrollContainer.addEventListener("mouseup", () => {
+      isDragging = false;
+      scrollContainer.style.cursor = "grab";
+    });
+
+    scrollContainer.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX) * 2; // Move factor for smoother scrolling
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+
+    // Add wheel support
+    scrollContainer.addEventListener("wheel", (e) => {
+      if (e.deltaY !== 0) {
+        scrollContainer.scrollLeft += e.deltaY;
+        e.preventDefault();
+      }
+    });
+// mini card end
+
+
 
 // dark mode start
 const toggleDarkModeButton = document.getElementById('toggleDarkMode');
