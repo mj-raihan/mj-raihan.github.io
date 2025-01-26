@@ -279,12 +279,13 @@ body {
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  font-family: Perpetua, serif; 
+  /* font-family: Perpetua, serif;  */
+  font-family: 'GFS Didot';
   text-align: center;
 }
 
 .mini-card-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin: 0;
   margin-bottom: 8px;
@@ -524,6 +525,23 @@ body {
 
 /* important page end */
 
+/* experiance mini card start */
+.dark-mode .mini-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #333;
+
+}
+
+.dark-mode .mini-card-title {
+  color: #fff;
+}
+
+.dark-mode .mini-card-text {
+  color: #fff;
+}
+
+/* experiance mini card end */
+
 /* new update start */
 /* Date part */
 .dark-mode .news-item .date {
@@ -629,6 +647,62 @@ body {
   }
 
   /* card end */
+
+  /* experiance mini card start */
+.mini-card-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  width: 100%; /* Remove fixed width, use full width */
+  cursor: grab;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  box-sizing: border-box; /* Ensure no extra space */
+}
+
+.mini-card {
+  flex: 0 0 200px;
+  height: 330px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+
+.mini-card img {
+  width: 100%;
+  height: 50%;
+  padding-top: 2%;
+  /* object-fit: cover; */
+}
+
+.mini-card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  font-family: Perpetua, serif; 
+  text-align: center;
+}
+
+.mini-card-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.mini-card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* experiance mini card end */
 
   /* carousel start */
   #image-carousel {
