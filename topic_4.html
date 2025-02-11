@@ -2,169 +2,401 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Md. Johir Raihan</title>
-    <link rel="icon" href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Johir Raihan</title>
+  <link rel="icon"
+    href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1"
+    type="image/x-icon">
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+  <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+    rel="stylesheet">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css"
+    rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
-    <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="topic_style.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- KaTeX for math equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+    integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="topic_style_second.css">
+
 
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <nav id="sidebar" class="position-fixed sidebar-color">
-        <ul class="list-unstyled components" style="font-family: Perpetua, serif; font-size: 17pt;">
-          <li>
-            <a href="index.html" class="list-group-item" id="home-tab" onclick="showContent('home'); hideSidebar()">
-              <img src="icons/1.png" alt="Home Icon" width="24" height="24">
-              Home</a>
-          </li>
-          <li>
-            <a href="publication.html" class="list-group-item" id="publication-tab"
-              onclick="showContent('publication'); hideSidebar()"><img src="icons/2.png" alt="Home Icon" width="24"
-                height="24"> Publications</a>
-          </li>
-          <li>
-            <a href="project.html" class="list-group-item" id="project-tab"
-              onclick="showContent('project'); hideSidebar()"><img src="icons/3.png" alt="Home Icon" width="24" height="24">
-              Projects</a>
-          </li>
-          <li>
-            <a href="achievements.html" class="list-group-item" id="achievements-tab"
-              onclick="showContent('achievements'); hideSidebar()"><img src="icons/4.png" alt="Home Icon" width="24"
-                height="24">Achievements</a>
-          </li>
-          <li>
-            <a href="references.html" class="list-group-item" id="references-tab"
-              onclick="showContent('references'); hideSidebar()"><img src="icons/6.svg" alt="Home Icon" width="24"
-                height="24">References</a>
-          </li>
-          <li>
-            <a href="https://drive.google.com/file/d/1nknOufa4i5EBhHDoEhVQZFoGmJ8rYBeE/view?usp=drive_link"
-              class="list-group-item" id="resume-tab" onclick="hideSidebar()"><img src="icons/5.png" alt="Home Icon"
-                width="24" height="24">
-              Resume</a>
-          </li>
-        </ul>
-      </nav>
-    
-    
-      <div class="color-bar">
-        <p style="font-family: 'Writing Signature', cursive; ">Md. Johir Raihan</p>
+  <!-- Sidebar start -->
+  <nav id="sidebar" class="position-fixed sidebar-color">
+    <ul class="list-unstyled components" style="font-family: Perpetua, serif; font-size: 17pt;">
+      <li>
+        <a href="index.html" class="list-group-item" id="home-tab" onclick="showContent('home'); hideSidebar()">
+          <img src="icons/1.png" alt="Home Icon" width="24" height="24">
+          Home</a>
+      </li>
+      <li>
+        <a href="publication.html" class="list-group-item" id="publication-tab"
+          onclick="showContent('publication'); hideSidebar()"><img src="icons/2.png" alt="Home Icon" width="24"
+            height="24"> Publications</a>
+      </li>
+      <li>
+        <a href="project.html" class="list-group-item" id="project-tab"
+          onclick="showContent('project'); hideSidebar()"><img src="icons/3.png" alt="Home Icon" width="24" height="24">
+          Projects</a>
+      </li>
+      <li>
+        <a href="achievements.html" class="list-group-item" id="achievements-tab"
+          onclick="showContent('achievements'); hideSidebar()"><img src="icons/4.png" alt="Home Icon" width="24"
+            height="24">Achievements</a>
+      </li>
+      <li>
+        <a href="references.html" class="list-group-item" id="references-tab"
+          onclick="showContent('references'); hideSidebar()"><img src="icons/6.svg" alt="Home Icon" width="24"
+            height="24">References</a>
+      </li>
+      <li>
+        <a href="https://drive.google.com/file/d/1nknOufa4i5EBhHDoEhVQZFoGmJ8rYBeE/view?usp=drive_link"
+          class="list-group-item" id="resume-tab" onclick="hideSidebar()"><img src="icons/5.png" alt="Home Icon"
+            width="24" height="24">
+          Resume</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="color-bar">
+    <p style="font-family: 'Writing Signature', cursive; ">Md. Johir Raihan</p>
+  </div>
+  <!-- Sidebar end -->
+
+  <!-- Page Initial start -->
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle">
+    <i class="fas fa-bars"></i>
+    <!-- hamberger bar -->
+
+  </div>
+
+  <!-- Close Menu Button (Added) -->
+  <div id="menu-close" style="display: none;">
+    <i class="fas fa-times"></i>
+  </div>
+
+  <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </div>
+  <!-- Page Initial end -->
+
+  <!-- toc start -->
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul id="toc-list"></ul>
+  </nav>
+  <!-- toc end -->
+
+  <!-- page content start -->
+  <div class="page-start">
+    <div class="header">
+      <h1>Autistic Kids Companion</h1>
+      <div style="padding-top: 20px;">
       </div>
-    <!-- Page Content -->
-    <div id="content">
+      <img src="https://www.dropbox.com/scl/fi/lqu4ott5vsc2gcjt7a04p/9.gif?rlkey=m1ez2ckbv8ownfanggd0vag1a&raw=1"
+        alt="Header Image">
+    </div>
 
-        <!-- Hamburger Menu -->
-        <div id="menu-toggle">
-            <i class="fas fa-bars"></i>
-            <!-- hamberger bar -->
+    <button class="toc-toggle" onclick="toggleTOC()">☰</button>
+    Autistic Kids Companion: An Automatic Exercise Assessment and Companion for Autistic Kids and Motor
+    Dysfunction Patients Using ML
 
+
+    <div style="padding-top: 50px;">
+    </div>
+
+    <article class="default-topic-text">
+      <h2 id="step_5" class="default-headline-text">Background</h2>
+      Autism Spectrum Disorder (ASD) affects millions worldwide, making motor coordination and daily activities
+      challenging. Innovative solutions leveraging artificial intelligence and machine learning can provide much-needed
+      assistance. The Autistic Kids Companion is one such revolutionary tool designed to help autistic children and
+      motor dysfunction patients with exercise assessment and progress monitoring.
+      </br>
+      </br>
+      Autism affects nearly 75 million people globally, including over 468,000 individuals in Bangladesh. Existing
+      exercise-assessment solutions rely on expensive kinetic sensors and high computational power, making them
+      inaccessible to many. The need for an affordable, intelligent, and interactive solution led to the development of
+      this app.
+      </br>
+      </br>
+      <div class="vid_content">
+        <iframe width="727" height="483" src="https://www.youtube.com/embed/hNnHTisxkPQ"
+          title="Autistic Kids Companion - Presentation" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+
+      <h2 id="step_10" class="default-headline-text">How the App Works</h2>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/8axja8eirkz5589enbo77/Slide4.PNG?rlkey=ra3z5cpeyomn28zlrmigelima&st=gh5xcg9r&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      <p>The Autistic Kids Companion utilizes camera-based pose detection and machine learning algorithms to analyze
+        body movements during exercise. It provides real-time feedback through animations, ensuring exercises are
+        performed correctly and effectively.
+
+
+      <h3 id="KF" class="default-headline-text">Key Functionalities</h3>
+      <ul>
+        <li>Online and Offline Modes: Users can access assessments in real-time or review progress offline.</li>
+        <li>Pose Landmark Detection: Tracks body movements using camera input.</li>
+        <li>Exercise Knowledge Base: Offers interactive lessons for various exercises.</li>
+        <li>Data Upload & Monitoring: Stores progress data, allowing caregivers to track improvements.</li>
+        <li>Machine Learning-Based Analysis: Provides accurate assessments based on vast datasets.</li>
+      </ul>
+      <h3 id="EAM" class="default-headline-text">Exercise Assessment and Monitoring</h3>
+      <ul>
+        <li>The app supports various exercises, including:</li>
+        <ul>
+          <li>Hand lifting</li>
+          <li>Trunk rotation</li>
+          <li>Jumping jacks</li>
+          <li>Squats</li>
+          <li>Skipping</li>
+        </ul>
+        <li>These exercises help improve motor functions in autistic children and those with movement disorders.</li>
+        <li>The app’s weekly progress tracking system offers insights into user improvements.</li>
+      </ul>
+      </p>
+
+      <h2 id="TBA" class="default-headline-text">Technology Behind the App</h2>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/5asanof0d3d0ltxd063wv/Slide8.PNG?rlkey=ofueghhrt39uqz7r83gicje0o&st=kf95007w&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      The Autistic Kids Companion leverages advanced machine learning and computer vision technologies to provide an
+      accurate and effective exercise assessment for autistic children and individuals with motor dysfunction. One of
+      the core technologies powering the app is Google MediaPipe, a state-of-the-art framework for real-time pose
+      tracking. By analyzing key body landmarks, the app can determine movement accuracy, suggest corrections, and
+      provide meaningful feedback to users.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/tseunz31ho7c0tdpt0jy5/Slide10.PNG?rlkey=l82atl7k3vey67ep0hhf8u4kb&st=8ik0cjpg&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      To ensure scalability and efficiency, the app utilizes cloud computing platforms like Amazon AWS and Google Cloud
+      for model training, data processing, and storage. These cloud-based solutions enable the app to handle large
+      volumes of data efficiently, making it easier to improve its predictive capabilities over time. Additionally, the
+      KIMORE Benchmark Dataset, a well-known dataset for movement analysis, is incorporated into the app’s learning
+      process. Using SHAP-based assessment (SHapley Additive exPlanations), the app provides interpretable machine
+      learning predictions, ensuring that the exercise recommendations are tailored to the specific needs of each user.
+
+      <h2 id="BFS" class="default-headline-text">Benefits and Future Scope</h2>
+
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/q5hyul5813kaeennn221j/Slide11.PNG?rlkey=5zc4ehjlkrb0lphxjck09o2or&st=kja2kl56&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+
+      The Autistic Kids Companion is designed to bridge the gap between accessibility and affordability, making advanced
+      therapeutic solutions available to a broader audience. Unlike traditional rehabilitation tools that rely on
+      expensive kinetic sensors and require high computational power, this app runs efficiently on standard devices with
+      a camera, making it both cost-effective and easy to use.
+      </br>
+      </br>
+      1. Increased engagement through animations - The app enhances user interaction with playful, animated exercises
+      that
+      make physical activities enjoyable for autistic children.
+      </br>
+      2. Accurate exercise assessments - Using AI-powered pose detection, the app ensures that exercises are performed
+      correctly, helping users improve their motor skills.
+      </br>
+      3. Easy-to-use interface for caregivers and therapists - The app is designed with a user-friendly interface,
+      making
+      it accessible to parents, therapists, and caregivers who monitor the child’s progress.
+      </br>
+      4. Potential expansion to other motor dysfunction conditions - While primarily designed for autistic children, the
+      app has the potential to assist stroke patients, elderly individuals, and individuals with other neuromuscular
+      disorders.
+      </br>
+      </br>
+      Looking ahead, future advancements in the app could include personalized AI-driven exercise plans, where the
+      system automatically adapts workouts based on the user's performance. Enhanced real-time feedback with more
+      detailed correction suggestions could further refine the training process. Additionally, integration with wearable
+      devices such as smartwatches and fitness trackers could provide real-time biometric feedback, making assessments
+      even more comprehensive and precise.
+      <h2 id="conclusion" class="default-headline-text">Conclusion</h2>
+
+      The Autistic Kids Companion is a groundbreaking initiative that brings together technology, healthcare, and
+      accessibility to create a smarter, more effective approach to rehabilitation. By combining artificial
+      intelligence, cloud computing, and pose tracking, the app delivers an innovative solution for autism therapy and
+      motor dysfunction treatment. As research in this field continues to evolve, the app holds immense potential to
+      transform rehabilitation and therapy, ensuring that individuals with autism and motor disorders receive the
+      support they need to lead healthier, more independent lives.
+
+      <!-- image carousel start -->
+      <h2 id="conclusion" class="default-headline-text">Event Photos</h2>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/geq3kdikow9j7zrulcfy9/346969920_918955345855075_2793170235993339450_n.jpg?rlkey=zgmu58bxu2678ki0selp780lj&st=dhqd6sep&raw=1"
+              alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/myg2zlumhrg3unymx69be/346769652_648938423724664_3601423998962762534_n.jpg?rlkey=gz19d4kb8c00zsm4atnzxazed&st=7s88dfr7&raw=1"
+              alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/kuokv48a81xqso3pbu0bk/IMG20230513182129.jpg?rlkey=1ujz4isni9864c5aff16qsxct&st=z8ztbqq8&raw=1"
+              alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/sl7uiuhyvtnfvu57pbu8b/IMG20230513182037.jpg?rlkey=l8ephkajdkqufnt0cpqhqqaco&st=600k6tsa&raw=1"
+              alt="Fourth slide">
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- image carousel end -->
 
-        <!-- Close Menu Button (Added) -->
-        <div id="menu-close" style="display: none;">
-            <i class="fas fa-times"></i>
-        </div>
+      <h2 id="step_25" class="default-headline-text">Additional Information</h2>
+      <a href="https://youtu.be/hNnHTisxkPQ"
+        class="stylish-link" target="_blank" rel="noopener noreferrer">1. Presentation Video - Youtube</a>
+      </br>
+      <a href="https://www.youtube.com/watch?v=MshVl_PDF6s&ab_channel=Md.JohirRaihan" class="stylish-link" target="_blank"
+        rel="noopener noreferrer">2. Prize Giving Video - Youtube</a>
+      </br>
+      <!-- <a href="https://nsac.basis.org.bd/team/storm-troopers" class="stylish-link" target="_blank"
+        rel="noopener noreferrer">3. Khulna University Media Coverage - KU</a> -->
 
-        <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
-            <i class="fas fa-moon"></i>
-        </div>
+    </article>
+    <div style="padding-top: 250px;">
+    </div>
+    <div style="text-align: center; ">
+      <b>&copy; 2023 Md. Johir Raihan</b>
+  </div>
+  </div>
+  <!-- page content end -->
 
-        <div><br>
-        </div>
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
-        <div class=" col-md-8 mx-auto" style="font-family: 'GFS Didot'">
-            <h3 class="card-title" style=" font-family: 'Lato', sans-serif; ">Autistic Kids Companion: An Automatic
-                Exercise Assessment and Companion for Autistic Kids and Motor
-                Dysfunction Patients Using ML</h3>
+  <!-- Prism.js for syntax highlighting & copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
 
-            <p style="font-size: 16px;line-height: 1.5;">
-                <b><a href="index.html">Md. Johir Raihan</a> </b>|
-                <b>25 Sept 2023</b> |
-                <b>&copy; 2023 Md. Johir Raihan</b>
-                <br>
-            </p>
+  <!-- KaTeX for rendering math equations -->
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+    integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh"
+    crossorigin="anonymous"></script>
 
-            <div style="text-align: center;">
-                <img class="img_content" src="https://www.dropbox.com/scl/fi/lqu4ott5vsc2gcjt7a04p/9.gif?rlkey=m1ez2ckbv8ownfanggd0vag1a&raw=1">
-            </div>
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
 
-            <br>
+  <script src="scripts.js"></script>
 
-            <p style="font-size: 18px;line-height: 1.5;">
-                <b>Title:</b> Autistic Kids Companion: An Automatic Exercise Assessment and Companion for Autistic Kids
-                and
-                Motor Dysfunction Patients Using ML<br>
-                <b>Authors:</b> Md. J. Raihan<br>
-                <b>Achivement:</b> <span style="color: red;">1st position (Champion) Award</span> <br>
-                <!-- <b>Materials:</b> <a href="https://ieeexplore.ieee.org/document/9564240">Paper Link </a> | Google Drive <br> -->
-            </p>
+  <script>
+    function toggleTOC() {
+      document.querySelector(".toc").classList.toggle("show");
+    }
 
-            <h2>Presentation Video</h2>
-            <div class="vid_content">
-                <iframe width="727" height="483" src="https://www.youtube.com/embed/hNnHTisxkPQ"
-                    title="Autistic Kids Companion - Presentation" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <br>
+    const tocList = document.getElementById('toc-list');
+    const headings = document.querySelectorAll('article h2, article h3');
+    let lastH2 = null;
 
-            <h2>Abstract</h2>
-            <p style="font-size: 18px; text-align: justify; line-height: 1.5;"> Many people with Autism Spectrum
-                Disorder
-                (ASD) have trouble with their ability to coordinate their movements and process their senses. They may
-                also
-                display repetitive or stereotyped motions. However, regular physical activity and exercise can have many
-                advantages for people with ASD, such as better physical health, and decreased anxiety. I have proposed
-                an
-                app idea that will act as their companion and make their exercise more enjoyable. The app titled
-                “Autistic
-                Kids Companion” uses a Mediapipe-based pose landmark algorithm to extract landmarks which are given to a
-                Machine Learning (ML) model to predict the score of the performed exercise and analyze their body
-                movement.
-                The app will also provide which body part they should focus more on to accurately do the exercise. I
-                have
-                also provided an idea to use animated characters in place of their body so that it is more entertaining
-                for
-                them. Also, I have added a page that will contain many training exercises to guide their parents. The
-                app
-                will also collect statistical data about their child's exercise progress and will show a progress chart.
-                Further, I have implemented the idea of uploading their performed exercise to an online server, that
-                will
-                automatically train a model on the new dataset and distribute the new model to the mobile app. In short,
-                the
-                application will enable families with ASD children to live a better and healthier life.</p>
-            <br>
+    headings.forEach(heading => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#${heading.id}`;
+      a.textContent = heading.textContent;
 
-            <h2>Program Video</h2>
-            <div class="vid_content">
-                <iframe width="727" height="483" src="https://www.youtube.com/embed/MshVl_PDF6s"
-                    title="Autistic Kids Companion - Prize Giving" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
+      if (heading.tagName === 'H2') {
+        li.appendChild(a);
+        tocList.appendChild(li);
+        lastH2 = li;
+      } else if (heading.tagName === 'H3' && lastH2) {
+        let subList = lastH2.querySelector('ul');
+        if (!subList) {
+          subList = document.createElement('ul');
+          lastH2.appendChild(subList);
+        }
+        const subItem = document.createElement('li');
+        subItem.appendChild(a);
+        subList.appendChild(subItem);
+      }
+    });
 
+    // IntersectionObserver for active section
+    const tocLinks = document.querySelectorAll('.toc a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const tocLink = document.querySelector(`a[href="#${entry.target.id}"]`);
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => link.classList.remove('active'));
+          tocLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.5 });
 
-            <!-- conent end -->
-        </div>
+    headings.forEach(heading => observer.observe(heading));
 
-        <!-- Bootstrap JS and jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="scripts.js"></script>
+    // Smooth scrolling
+    document.querySelectorAll('.toc a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
