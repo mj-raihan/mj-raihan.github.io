@@ -247,11 +247,12 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
-  width: 100%; /* Remove fixed width, use full width */
+  width: 100%;
   cursor: grab;
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  box-sizing: border-box; /* Ensure no extra space */
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .mini-card {
@@ -302,6 +303,39 @@ body {
 
 .mini-card-container:active {
   cursor: grabbing;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+.left-button {
+  left: 10px;
+}
+
+.right-button {
+  right: 10px;
 }
 /* experiance mini card end */
 

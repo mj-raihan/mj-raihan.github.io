@@ -29,9 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // carousel end
 
-// active tab sign
-
-
+// active tab sign start
 function hideSidebar() {
   if ($(window).width() <= 1200) {
     $("#sidebar").removeClass("active");
@@ -81,53 +79,7 @@ $(document).ready(function () {
   // Display the Home content by default
   // showContent("home");
 });
-
-// popup start
-
-// popup end
-
-// mini card start
- const scrollContainer = document.getElementById("scrollContainer");
-
-    let isDragging = false;
-    let startX;
-    let scrollLeft;
-
-    scrollContainer.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      startX = e.pageX - scrollContainer.offsetLeft;
-      scrollLeft = scrollContainer.scrollLeft;
-      scrollContainer.style.cursor = "grabbing";
-    });
-
-    scrollContainer.addEventListener("mouseleave", () => {
-      isDragging = false;
-      scrollContainer.style.cursor = "grab";
-    });
-
-    scrollContainer.addEventListener("mouseup", () => {
-      isDragging = false;
-      scrollContainer.style.cursor = "grab";
-    });
-
-    scrollContainer.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      const x = e.pageX - scrollContainer.offsetLeft;
-      const walk = (x - startX) * 2; // Move factor for smoother scrolling
-      scrollContainer.scrollLeft = scrollLeft - walk;
-    });
-
-    // Add wheel support
-    scrollContainer.addEventListener("wheel", (e) => {
-      if (e.deltaY !== 0) {
-        scrollContainer.scrollLeft += e.deltaY;
-        e.preventDefault();
-      }
-    });
-// mini card end
-
-
+// active tab sign end
 
 // dark mode start
 const toggleDarkModeButton = document.getElementById('toggleDarkMode');
@@ -246,4 +198,53 @@ function removeNotification() {
 //   }
 // });
 // hashing end
+
+
+// mini card start
+// Function to initialize scroll buttons for a container
+function initializeScrollButtons(containerId, leftBtnId, rightBtnId) {
+  const mini_container = document.getElementById(containerId);
+  const mini_leftBtn = document.getElementById(leftBtnId);
+  const mini_rightBtn = document.getElementById(rightBtnId);
+  
+  // Amount to scroll (width of card + gap)
+  const scrollAmount = 316; // 300px card width + 16px gap
+
+  // Update button states
+  function updateButtonStates() {
+    mini_leftBtn.disabled = mini_container.scrollLeft <= 0;
+    mini_rightBtn.disabled = mini_container.scrollLeft >= mini_container.scrollWidth - mini_container.clientWidth;
+  }
+
+  // Scroll left
+  mini_leftBtn.addEventListener('click', () => {
+    mini_container.scrollBy({
+      left: -scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+
+  // Scroll right
+  mini_rightBtn.addEventListener('click', () => {
+    mini_container.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+
+  // Listen for scroll events to update button states
+  mini_container.addEventListener('scroll', updateButtonStates);
+  
+  // Initial button state update
+  updateButtonStates();
+
+  // Update button states on window resize
+  window.addEventListener('resize', updateButtonStates);
+}
+
+// Initialize both containers
+initializeScrollButtons('scrollContainer1', 'leftBtn1', 'rightBtn1');
+initializeScrollButtons('scrollContainer2', 'leftBtn2', 'rightBtn2');
+// mini card end
+
 
