@@ -11,6 +11,8 @@ header {
     text-align: center;
     padding: 5px;
 }
+
+
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -22,11 +24,15 @@ main {
 section {
     margin-top: 20px;
 }
-.img_content {
-    width: 70%; /* Set the width to 50% of the parent container */
-    height: auto; /* Automatically adjust the height to maintain the aspect ratio */
-}
 
+/* image handelling start */
+.img_content {
+    width: 70%;
+    height: auto;
+}
+/* image handelling end */
+
+/* video handelling start */
 #vid-container {
     width: 100%;
     max-width: 640px;
@@ -34,9 +40,10 @@ section {
 }
 iframe {
     width: 100%;
-    max-width: 100%; /* Limit the width to 100% of the container */
+    max-width: 100%;
     height: 420px;
 }
+/* video handelling end */
 
 @media screen and (max-width: 768px) {
     #video-container {

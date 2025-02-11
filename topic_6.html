@@ -2,156 +2,237 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Md. Johir Raihan</title>
-    <link rel="icon" href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Johir Raihan</title>
+  <link rel="icon"
+    href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1"
+    type="image/x-icon">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
-    <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="topic_style.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+  <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet">
+
+  <!-- KaTeX for math equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="topic_style_second.css">
+  
 
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <nav id="sidebar" class="position-fixed sidebar-color">
-        <ul class="list-unstyled components" style="font-family: Perpetua, serif; font-size: 17pt;">
-          <li>
-            <a href="index.html" class="list-group-item" id="home-tab" onclick="showContent('home'); hideSidebar()">
-              <img src="icons/1.png" alt="Home Icon" width="24" height="24">
-              Home</a>
-          </li>
-          <li>
-            <a href="publication.html" class="list-group-item" id="publication-tab"
-              onclick="showContent('publication'); hideSidebar()"><img src="icons/2.png" alt="Home Icon" width="24"
-                height="24"> Publications</a>
-          </li>
-          <li>
-            <a href="project.html" class="list-group-item" id="project-tab"
-              onclick="showContent('project'); hideSidebar()"><img src="icons/3.png" alt="Home Icon" width="24" height="24">
-              Projects</a>
-          </li>
-          <li>
-            <a href="achievements.html" class="list-group-item" id="achievements-tab"
-              onclick="showContent('achievements'); hideSidebar()"><img src="icons/4.png" alt="Home Icon" width="24"
-                height="24">Achievements</a>
-          </li>
-          <li>
-            <a href="references.html" class="list-group-item" id="references-tab"
-              onclick="showContent('references'); hideSidebar()"><img src="icons/6.svg" alt="Home Icon" width="24"
-                height="24">References</a>
-          </li>
-          <li>
-            <a href="https://drive.google.com/file/d/1nknOufa4i5EBhHDoEhVQZFoGmJ8rYBeE/view?usp=drive_link"
-              class="list-group-item" id="resume-tab" onclick="hideSidebar()"><img src="icons/5.png" alt="Home Icon"
-                width="24" height="24">
-              Resume</a>
-          </li>
-        </ul>
-      </nav>
-    
-    
-      <div class="color-bar">
-        <p style="font-family: 'Writing Signature', cursive; ">Md. Johir Raihan</p>
+  <!-- Sidebar start -->
+  <nav id="sidebar" class="position-fixed sidebar-color">
+    <ul class="list-unstyled components" style="font-family: Perpetua, serif; font-size: 17pt;">
+      <li>
+        <a href="index.html" class="list-group-item" id="home-tab" onclick="showContent('home'); hideSidebar()">
+          <img src="icons/1.png" alt="Home Icon" width="24" height="24">
+          Home</a>
+      </li>
+      <li>
+        <a href="publication.html" class="list-group-item" id="publication-tab"
+          onclick="showContent('publication'); hideSidebar()"><img src="icons/2.png" alt="Home Icon" width="24"
+            height="24"> Publications</a>
+      </li>
+      <li>
+        <a href="project.html" class="list-group-item" id="project-tab"
+          onclick="showContent('project'); hideSidebar()"><img src="icons/3.png" alt="Home Icon" width="24" height="24">
+          Projects</a>
+      </li>
+      <li>
+        <a href="achievements.html" class="list-group-item" id="achievements-tab"
+          onclick="showContent('achievements'); hideSidebar()"><img src="icons/4.png" alt="Home Icon" width="24"
+            height="24">Achievements</a>
+      </li>
+      <li>
+        <a href="references.html" class="list-group-item" id="references-tab"
+          onclick="showContent('references'); hideSidebar()"><img src="icons/6.svg" alt="Home Icon" width="24"
+            height="24">References</a>
+      </li>
+      <li>
+        <a href="https://drive.google.com/file/d/1nknOufa4i5EBhHDoEhVQZFoGmJ8rYBeE/view?usp=drive_link"
+          class="list-group-item" id="resume-tab" onclick="hideSidebar()"><img src="icons/5.png" alt="Home Icon"
+            width="24" height="24">
+          Resume</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="color-bar">
+    <p style="font-family: 'Writing Signature', cursive; ">Md. Johir Raihan</p>
+  </div>
+   <!-- Sidebar end -->
+
+  <!-- Page Initial start -->
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle">
+    <i class="fas fa-bars"></i>
+    <!-- hamberger bar -->
+
+  </div>
+
+  <!-- Close Menu Button (Added) -->
+  <div id="menu-close" style="display: none;">
+    <i class="fas fa-times"></i>
+  </div>
+
+  <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </div>
+   <!-- Page Initial end -->
+
+  <!-- page content start -->
+  <div class="header">
+    <h1>Storms End</h1>
+      <div style="padding-top: 20px;">
       </div>
+    <img src="https://www.dropbox.com/scl/fi/0ix539ivmtrpj7unbc22n/8.gif?rlkey=onqm8lisymdtwqcq257fkkjtq&raw=1" alt="Header Image">
+  </div>
 
-    <!-- Page Content -->
-    <div id="content">
+  <button class="toc-toggle" onclick="toggleTOC()">☰</button>
 
-        <!-- Hamburger Menu -->
-        <div id="menu-toggle">
-            <i class="fas fa-bars"></i>
-            <!-- hamberger bar -->
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul id="toc-list"></ul>
+  </nav>
+  Storms End: AI enabled solution to visualize and predict Geomagnetic Storms from NASAs' "DISCOVR" spacecraft
 
-        </div>
+  <div style="padding-top: 50px;">
+  </div>
 
-        <!-- Close Menu Button (Added) -->
-        <div id="menu-close" style="display: none;">
-            <i class="fas fa-times"></i>
-        </div>
+  <article class="default-topic-text">
+    <h2 id="step_5" class="default-headline-text">Background</h2>
+    Our team, Storm Troopers, from Khulna University, has proudly won the NASA Space Apps Challenge 2023 Hackathon in the Khulna region. We are among the nine teams from Bangladesh selected to compete in the global round of this prestigious competition. 
+    The hackathon began in September, with over 250 teams participating in the initial selection round. Each team had to choose from 30 challenges provided by NASA, develop a solution, and present it in a four-minute video. Based on this round, 50 teams were selected for the national-level hackathon, where we competed against the best minds in the country. The national-level hackathon was held non-stop for 36 hours on October 6-7 at Independent University, Bangladesh (IUB). 
 
-        <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
-            <i class="fas fa-moon"></i>
-        </div>
-
-        <div><br>
-        </div>
-
-        <div class=" col-md-8 mx-auto" style="font-family: 'GFS Didot'">
-            <h3 class="card-title" style=" font-family: 'Lato', sans-serif; ">Storms End: AI enabled solution to
-                visualize and predict Geomagnetic Storms from NASAs' "DISCOVR" spacecraft</h3>
-
-            <p style="font-size: 16px;line-height: 1.5;">
-                <b><a href="index.html">Md. Johir Raihan</a> </b>|
-                <b>25 Sept 2023</b> |
-                <b>&copy; 2023 Md. Johir Raihan</b>
-                <br>
-            </p>
-
-            <div style="text-align: center;">
-                <img class="img_content" src="https://www.dropbox.com/scl/fi/0ix539ivmtrpj7unbc22n/8.gif?rlkey=onqm8lisymdtwqcq257fkkjtq&raw=1">
-            </div>
-
-            <br>
+    </br>
+    Our team worked on the challenge "Developing the Oracle of DSCOVR," which focused on utilizing data from NASA's DSCOVR satellite for scientific and technological advancements. We developed a machine learning model that can predict solar storms with 95% accuracy using 1.5 years of satellite data.
+    Following our victory in the Khulna region, we received warm congratulations from Professor Dr. Mahmud Hossain, Vice-Chancellor of Khulna University. He expressed his pride in our achievement, stating that it enhances the university’s reputation and paves the way for future success on both national and global platforms.
 
 
-            <p style="font-size: 18px;line-height: 1.5;">
-                <b>Title:</b> Storms End: AI enabled solution to
-                visualize and predict
-                Geomagnetic Storms from NASAs' "DISCOVR" spacecraft<br>
-                <b>Authors:</b> Mainul Islam Labib (Team Leader), <strong>Md. Johir Raihan</strong>, Wali Ullah, Sadia
-                Afrin, Md. Rashed Jaowad Khan<br>
-                <b>Achivement:</b> <span style="color: red;">Regional Championships (Khulna)</span> <br>
-                <!-- <b>Materials:</b> <a href="https://ieeexplore.ieee.org/document/9564240">Paper Link </a> | Google Drive <br> -->
-            </p>
+    <h2 id="step_10" class="default-headline-text">What is it </h2>
+    <p>A geomagnetic storm is a major disturbance of Earth's magnetosphere that occurs when there is a very efficient exchange of energy from the solar wind into the space surrounding Earth. While the storms create a beautiful aurora, they also can disrupt navigation systems such as the Global Navigation Satellite System (GNSS) and create harmful geomagnetic induced currents (GICs) in the power grid and pipelines. NASA's "DSCOVR" spacecraft has long been used to collect magnetometer readings from earths magnetic field which allowed scientists to make predictions about geomagnetic storms. But, occasional faulty data which is a result of the environment itself, is making the prediction task tougher. Hence, we; team "Storm Troopers"; are proposing "Storms End"; an AI enabled solution to visualize and predict geomagnetic storm. 
 
+    <div class="vid_content">
+    </br>
+        <iframe width="727" height="483" src="https://www.youtube.com/embed/ESYUsdPHaL4"
+            title="Storms End: AI-enabled solution to visualize and predict Geomagnetic Storms" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    
+    </div>
+  </br>
 
-            <h2>Presentation Video</h2>
-            <div class="vid_content">
-                <iframe width="727" height="483" src="https://www.youtube.com/embed/ESYUsdPHaL4"
-                    title="Storms End: AI-enabled solution to visualize and predict Geomagnetic Storms" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <br>
+    Our solution includes a Neural Network consisting of Spatial and Temporal modules to correctly capture the variability in magnetic readings made from "DSCOVR". The model will be able to take previous readings as input and will output the probability for a geomagnetic storm on a spatio-temporal scale. "Storms End" will also have visualization features where users will be able to see geomagnetic patterns in a 3D environment and how each area on earth is getting affected by geomagnetic storm. Similarly, it will also contain visualization on what other measurements made from "DSCOVR" are changing in time and space. Through "Storms End", we wish to build a solution that can accurately predict geomagnetic storms on a finer scale and we hope that our visualization features will motivate others to create solutions in this domain.</p>
 
-            <h2>Description</h2>
-            <p style="font-size: 18px; text-align: justify; line-height: 1.5;"> A geomagnetic storm is a major
-                disturbance of Earth's magnetosphere that occurs when there is a very efficient exchange of energy from
-                the solar wind into the space surrounding Earth. While the storms create a beautiful aurora, they also
-                can disrupt navigation systems such as the Global Navigation Satellite System (GNSS) and create harmful
-                geomagnetic induced currents (GICs) in the power grid and pipelines. NASA's "DSCOVR" spacecraft has long
-                been used to collect magnetometer readings from earths magnetic field which allowed scientists to make
-                predictions about geomagnetic storms. But, occasional faulty data which is a result of the environment
-                itself, is making the prediction task tougher. Hence, we; team "Storm Troopers"; are proposing "Storms
-                End"; an AI enabled solution to visualize and predict geomagnetic storm. Our solution includes a Neural
-                Network consisting of Spatial and Temporal modules to correctly capture the variability in magnetic
-                readings made from "DSCOVR". The model will be able to take previous readings as input and will output
-                the probability for a geomagnetic storm on a spatio-temporal scale. "Storms End" will also have
-                visualization features where users will be able to see geomagnetic patterns in a 3D environment and how
-                each area on earth is getting affected by geomagnetic storm. Similarly, it will also contain
-                visualization on what other measurements made from "DSCOVR" are changing in time and space. Through
-                "Storms End", we wish to build a solution that can accurately predict geomagnetic storms on a finer
-                scale and we hope that our visualization features will motivate others to create solutions in this
-                domain.</p>
-            <br>
+    <h2 id="step_20"class="default-headline-text">Team Background</h2>
+    <p>We are a multidisciplinary team from Khulna University, bringing together expertise from both engineering and communication fields. Our team consists of:</p>
+    <ul>
+        <li><strong>Mainul Islam Labib (Team Leader)</strong> Electronics and Communication Engineering</li>
+        <li><strong>Md. Johir Raihan</strong> Electronics and Communication Engineering</li>
+        <li><strong>Wali Ullah</strong> Electronics and Communication Engineering</li>
+        <li><strong>Sadia Afrin</strong> Mass Communication & Journalism</li>
+        <li><strong>Md. Rashed Jaowad Khan</strong> Electronics and Communication Engineering</li>
+    </ul>
 
-            <!-- conent end -->
-        </div>
+    <h2 id="step_20" class="default-headline-text">Additional Information</h2>
+    <a href="https://thedailycampus.com/economics-technology/126328/%E0%A6%A8%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%B0-%E0%A6%B8%E0%A7%8D%E0%A6%AA%E0%A7%87%E0%A6%B8-%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%B8%E0%A7%8D-%E0%A6%9A%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%9E%E0%A7%8D%E0%A6%9C-%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A6%BE%E0%A6%A5%E0%A6%A8%E0%A7%87-%E0%A6%86%E0%A6%9E%E0%A7%8D%E0%A6%9A%E0%A6%B2%E0%A6%BF%E0%A6%95-%E0%A6%9A%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A7%9F%E0%A6%A8-%E0%A6%96%E0%A7%81%E0%A6%AC%E0%A6%BF%E0%A6%B0-%E0%A6%A6%E0%A6%B2" class="stylish-link" target="_blank" rel="noopener noreferrer">1. নাসার স্পেস অ্যাপস্ চ্যালেঞ্জ হ্যাকাথনে আঞ্চলিক চ্যাম্পিয়ন খুবির দল - The Daily Campus News</a>
+  </br>
+    <a href="https://www.channel24bd.tv/campus/article/177323/!" class="stylish-link" target="_blank" rel="noopener noreferrer">2. নাসার স্পেস অ্যাপস্ চ্যালেঞ্জ হ্যাকাথনে আঞ্চলিক চ্যাম্পিয়ন খুবির দল - Channel 24</a>
+  </br>
+    <a href="https://nsac.basis.org.bd/team/storm-troopers" class="stylish-link" target="_blank" rel="noopener noreferrer">3. Project Description - NASA Space Apps Challenge Bangladesh 2024</a>
 
-        <!-- Bootstrap JS and jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="scripts.js"></script>
+  </article>
+  <div style="padding-top: 300px;">
+  </div>
+  <!-- page content end -->
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Prism.js for syntax highlighting & copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+  <!-- KaTeX for rendering math equations -->
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+  <script src="scripts.js"></script>
+
+  <script>
+    function toggleTOC() {
+      document.querySelector(".toc").classList.toggle("show");
+    }
+
+    const tocList = document.getElementById('toc-list');
+    const headings = document.querySelectorAll('article h2, article h3');
+    let lastH2 = null;
+
+    headings.forEach(heading => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#${heading.id}`;
+      a.textContent = heading.textContent;
+
+      if (heading.tagName === 'H2') {
+        li.appendChild(a);
+        tocList.appendChild(li);
+        lastH2 = li;
+      } else if (heading.tagName === 'H3' && lastH2) {
+        let subList = lastH2.querySelector('ul');
+        if (!subList) {
+          subList = document.createElement('ul');
+          lastH2.appendChild(subList);
+        }
+        const subItem = document.createElement('li');
+        subItem.appendChild(a);
+        subList.appendChild(subItem);
+      }
+    });
+
+    // IntersectionObserver for active section
+    const tocLinks = document.querySelectorAll('.toc a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const tocLink = document.querySelector(`a[href="#${entry.target.id}"]`);
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => link.classList.remove('active'));
+          tocLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    headings.forEach(heading => observer.observe(heading));
+
+    // Smooth scrolling
+    document.querySelectorAll('.toc a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
