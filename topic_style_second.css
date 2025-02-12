@@ -242,6 +242,16 @@ font-weight: bold;
 /* toc end */
 }
 
+@media (max-width: 768px) {
+/* page start start */
+.page-start {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* page start end */
+}
+
 pre {
 padding: 10px;
 border-radius: 6px;
