@@ -36,50 +36,11 @@
 
 <body>
 
-  <!-- Sidebar start -->
-  <nav id="sidebar" class="position-fixed sidebar-color">
-    <ul class="list-unstyled components" style="font-family: Perpetua, serif; font-size: 17pt;">
-      <li>
-        <a href="index.html" class="list-group-item" id="home-tab" onclick="showContent('home'); hideSidebar()">
-          <img src="icons/1.png" alt="Home Icon" width="24" height="24">
-          Home</a>
-      </li>
-      <li>
-        <a href="publication.html" class="list-group-item" id="publication-tab"
-          onclick="showContent('publication'); hideSidebar()"><img src="icons/2.png" alt="Home Icon" width="24"
-            height="24"> Publications</a>
-      </li>
-      <li>
-        <a href="project.html" class="list-group-item" id="project-tab"
-          onclick="showContent('project'); hideSidebar()"><img src="icons/3.png" alt="Home Icon" width="24" height="24">
-          Projects</a>
-      </li>
-      <li>
-        <a href="achievements.html" class="list-group-item" id="achievements-tab"
-          onclick="showContent('achievements'); hideSidebar()"><img src="icons/4.png" alt="Home Icon" width="24"
-            height="24">Achievements</a>
-      </li>
-      <li>
-        <a href="references.html" class="list-group-item" id="references-tab"
-          onclick="showContent('references'); hideSidebar()"><img src="icons/6.svg" alt="Home Icon" width="24"
-            height="24">References</a>
-      </li>
-      <li>
-        <a href="https://drive.google.com/file/d/1nknOufa4i5EBhHDoEhVQZFoGmJ8rYBeE/view?usp=drive_link"
-          class="list-group-item" id="resume-tab" onclick="hideSidebar()"><img src="icons/5.png" alt="Home Icon"
-            width="24" height="24">
-          Resume</a>
-      </li>
-    </ul>
-  </nav>
+  <!-- sidebar start -->
+  <div id="sidebar-common-container"></div>
+  <!-- sidebar end -->
 
-
-  <div class="color-bar">
-    <p style="font-family: 'Writing Signature', cursive; ">Md. Johir Raihan</p>
-  </div>
-  <!-- Sidebar end -->
-
-  <!-- Page Initial start -->
+    <!-- Page Initial start -->
   <!-- Hamburger Menu -->
   <div id="menu-toggle">
     <i class="fas fa-bars"></i>
@@ -115,6 +76,7 @@
     </div>
 
     <button class="toc-toggle" onclick="toggleTOC()">☰</button>
+
     Storms End: AI enabled solution to visualize and predict Geomagnetic Storms from NASAs' "DISCOVR" spacecraft
 
     <div style="padding-top: 50px;">
@@ -223,8 +185,9 @@
     onload="renderMathInElement(document.body);"></script>
 
   <script src="scripts.js"></script>
+  <script src="topic_scripts.js"></script>
 
-  <script>
+  <!-- <script>
     function toggleTOC() {
       document.querySelector(".toc").classList.toggle("show");
     }
@@ -278,7 +241,7 @@
         });
       });
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

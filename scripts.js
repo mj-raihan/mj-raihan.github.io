@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // active tab sign start
 function hideSidebar() {
-  if ($(window).width() <= 1200) {
+  if ($(window).width() <= 1300) {
     $("#sidebar").removeClass("active");
     $("#menu-toggle").show();
     $("#menu-close").hide();
@@ -40,7 +40,7 @@ function hideSidebar() {
 
 $(document).ready(function () {
   function handleToggleIcons() {
-    if ($(window).width() <= 1200) {
+    if ($(window).width() <= 1300) {
       $("#menu-toggle").show();
       $("#menu-close").hide();
     } else {

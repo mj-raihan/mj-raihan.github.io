@@ -42,7 +42,6 @@ body {
 }
 
 
-
 #content {
   transition: margin-left 0.3s;
   padding: 15px;
@@ -478,6 +477,10 @@ body {
   color: #fff;
 }
 
+.dark-mode img.sidebar-img {
+  filter: invert(1);
+}
+
 .dark-mode .card {
   background-color: #333;
   /* Dark mode background color */
@@ -603,9 +606,8 @@ body {
 /* dark mode end */
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 
-  /* @media (max-width: 768px) { */
   #sidebar {
     margin-left: -250px;
     /* text-align: left; */

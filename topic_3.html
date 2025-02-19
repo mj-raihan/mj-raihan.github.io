@@ -2,173 +2,368 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Md. Johir Raihan</title>
-    <link rel="icon" href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Johir Raihan</title>
+  <link rel="icon"
+    href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1"
+    type="image/x-icon">
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+  <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+    rel="stylesheet">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css"
+    rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
-    <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="topic_style.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- KaTeX for math equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+    integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="topic_style_second.css">
+
 
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <nav id="sidebar" class="position-fixed sidebar-color">
-        <ul class="list-unstyled components" style="font-family: Perpetua, serif; font-size: 17pt;">
-          <li>
-            <a href="index.html" class="list-group-item" id="home-tab" onclick="showContent('home'); hideSidebar()">
-              <img src="icons/1.png" alt="Home Icon" width="24" height="24">
-              Home</a>
-          </li>
-          <li>
-            <a href="publication.html" class="list-group-item" id="publication-tab"
-              onclick="showContent('publication'); hideSidebar()"><img src="icons/2.png" alt="Home Icon" width="24"
-                height="24"> Publications</a>
-          </li>
-          <li>
-            <a href="project.html" class="list-group-item" id="project-tab"
-              onclick="showContent('project'); hideSidebar()"><img src="icons/3.png" alt="Home Icon" width="24" height="24">
-              Projects</a>
-          </li>
-          <li>
-            <a href="achievements.html" class="list-group-item" id="achievements-tab"
-              onclick="showContent('achievements'); hideSidebar()"><img src="icons/4.png" alt="Home Icon" width="24"
-                height="24">Achievements</a>
-          </li>
-          <li>
-            <a href="references.html" class="list-group-item" id="references-tab"
-              onclick="showContent('references'); hideSidebar()"><img src="icons/6.svg" alt="Home Icon" width="24"
-                height="24">References</a>
-          </li>
-          <li>
-            <a href="https://drive.google.com/file/d/1nknOufa4i5EBhHDoEhVQZFoGmJ8rYBeE/view?usp=drive_link"
-              class="list-group-item" id="resume-tab" onclick="hideSidebar()"><img src="icons/5.png" alt="Home Icon"
-                width="24" height="24">
-              Resume</a>
-          </li>
-        </ul>
-      </nav>
-    
-    
-      <div class="color-bar">
-        <p style="font-family: 'Writing Signature', cursive; ">Md. Johir Raihan</p>
+
+  <!-- sidebar start -->
+  <div id="sidebar-common-container"></div>
+  <!-- sidebar end -->
+
+  <!-- Page Initial start -->
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle">
+    <i class="fas fa-bars"></i>
+    <!-- hamberger bar -->
+
+  </div>
+
+  <!-- Close Menu Button (Added) -->
+  <div id="menu-close" style="display: none;">
+    <i class="fas fa-times"></i>
+  </div>
+
+  <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </div>
+  <!-- Page Initial end -->
+
+  <!-- toc start -->
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul id="toc-list"></ul>
+  </nav>
+  <!-- toc end -->
+
+  <!-- page content start -->
+  <div class="page-start">
+    <div class="header">
+      <h1>Gesture-Driven Robotic Arm</h1>
+      <div style="padding-top: 20px;">
       </div>
-
-    <!-- Page Content -->
-    <div id="content">
-
-        <!-- Hamburger Menu -->
-        <div id="menu-toggle">
-            <i class="fas fa-bars"></i>
-            <!-- hamberger bar -->
-
-        </div>
-
-        <!-- Close Menu Button (Added) -->
-        <div id="menu-close" style="display: none;">
-            <i class="fas fa-times"></i>
-        </div>
-
-        <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
-            <i class="fas fa-moon"></i>
-        </div>
-
-        <div><br>
-        </div>
-
-        <div class=" col-md-8 mx-auto" style="font-family: 'GFS Didot'">
-            <h3 class="card-title" style=" font-family: 'Lato', sans-serif; ">Gesture-Driven Robotic Arm: Utilizing Computer Vision for Enhanced Human-Machine
-                Interaction</h3>
-
-            <p style="font-size: 16px;line-height: 1.5;">
-                <b><a href="index.html">Md. Johir Raihan</a> </b>|
-                <b>25 Sept 2023</b> |
-                <b>&copy; 2023 Md. Johir Raihan</b>
-                <br>
-            </p>
-
-            <div style="text-align: center;">
-                <img class="img_content" src="https://www.dropbox.com/scl/fi/9ilf3htkw733yxsup5ejf/5.gif?rlkey=93ufwp2j32a1s5ryhpuv64225&raw=1">
-            </div>
-            <br>
-
-
-            <p style="font-size: 18px;line-height: 1.5;">
-                <b>Title:</b> Gesture-Driven Robotic Arm: Utilizing Computer Vision for Enhanced Human-Machine
-                Interaction.<br>
-                <b>Creator:</b> <strong>Md. Johir Raihan</strong>, Jannatul Jeba, Samiya Intesar, MD Jakaria<br>
-                <!-- <b>Achivement:</b> <span style="color: red;">1st position (Champion) Award</span> <br> -->
-                <!-- <b>Materials:</b> <a href="https://ieeexplore.ieee.org/document/9564240">Paper Link </a> | Google Drive <br> -->
-                <!-- <br> -->
-            </p>
-            <h2>Presentation Video</h2>
-            <div class="vid_content">
-                <iframe width="1168" height="657" src="https://www.youtube.com/embed/x-ixVZ53XgI"
-                    title="Gesture-Driven Robotic Arm: Utilizing Computer Vision for Enhanced Human-Machine Interaction."
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <br>
-
-            <h2>Abstract</h2>
-            <p style="font-size: 18px; text-align: justify; line-height: 1.5;"> This project presents a computer
-                vision-controlled robot arm system. It consists of a computer that continuously captures real-time
-                camera
-                input and employs a MediaPipe Machine Learning model to recognize hand gestures. The recognized gestures
-                are
-                then transmitted to an ESP-32 microcontroller via the WebSocket communication protocol. The robot arm is
-                equipped with three stepper motors, responsible for controlling the base, Arm 1, and Arm 2. A 12V, 5A
-                power
-                supply is used to provide the necessary power to the stepper motors, while a buck converter steps down
-                the
-                voltage to 3.3V for the ESP-32. <br>
-
-                Hand gestures play a crucial role in controlling the robot arm. A rectangular box, adaptable to any
-                location
-                within the camera's view, activates the control mechanism when a single hand is displayed. Specific
-                gestures
-                control individual robot arm components, with fist or open palm gestures used for vertical arm control
-                and
-                left/right placement determining base rotation. The system supports simultaneous control of multiple
-                components, enhancing its efficiency and versatility. <br>
-
-                The robot arm's physical design is crafted using PVC board, nuts, bolts, and glue, with the base
-                featuring a
-                360-degree rotation capability. The stepper motors and robot arm are connected via couplers. Both the
-                microcontroller (ESP-32) and the computer require custom coding: C++ is used for the ESP-32, utilizing
-                the
-                Accelstepper library for motor control, and network libraries to enable WebSocket communication. An HTML
-                webpage is created to facilitate remote robot arm control. <br>
-
-                The computer vision aspect of the project employs Python to process camera input. A Mediapipe human pose
-                prediction model identifies the hand's joint coordinates relative to the screen. A rectangular box
-                activation control ensures that gestures are recognized only when the hand is outside the box. A
-                four-finger
-                gesture is used to disable the control. This user-friendly gesture control mechanism makes the robot arm
-                versatile and accessible for various applications.</p>
-
-
-        </div>
-
-        <!-- conent end -->
+      <img
+        src="https://www.dropbox.com/scl/fi/9ilf3htkw733yxsup5ejf/5.gif?rlkey=93ufwp2j32a1s5ryhpuv64225&st=5kajy2gi&raw=1"
+        alt="Header Image">
     </div>
 
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
+    <button class="toc-toggle" onclick="toggleTOC()">☰</button>
+    Gesture-Driven Robotic Arm: Utilizing Computer Vision for Enhanced Human-Machine Interaction.
+
+
+    <div style="padding-top: 50px;">
+    </div>
+
+    <article class="default-topic-text">
+      <h2 id="step_5" class="default-headline-text">Background</h2>
+      Gesture-controlled robotic arms offer significant benefits in various fields, particularly in a developing country
+      like Bangladesh. In industries, these robotic arms can enhance precision in manufacturing, reducing dependency on
+      manual labor while improving efficiency and safety in hazardous environments. For disabled individuals, such
+      technology can provide an affordable and intuitive solution for assistive devices, enabling them to regain
+      mobility and independence. In the medical field, gesture-controlled robotic arms can assist in remote surgeries
+      and rehabilitation therapy, allowing healthcare professionals to operate with greater accuracy and minimal
+      physical contact. Given Bangladesh's rapid industrialization and increasing demand for automation, integrating
+      gesture-controlled robotic arms can bridge the technological gap, enhance productivity, and improve the quality of
+      life for many. Here, we have tried to develop a mini prototype version of a gesture-controlled robotic arm.
+
+      </br>
+      </br>
+      <div class="vid_content">
+        <iframe width="727" height="483" src="https://www.youtube.com/embed/x-ixVZ53XgI"
+          title="Gesture-Driven Robotic Arm: Utilizing Computer Vision for Enhanced Human-Machine Interaction."
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+
+      <h2 id="MC" class="default-headline-text">Major Components</h2>
+      MediaPipe is an open-source framework for building pipelines to perform computer vision inference over arbitrary
+      sensory data such as video or audio. It was developed by C. Lugaresi et al. at google [3]. The framework provides
+      many solutions such as human pose, hand tracking, face landmarks etc (Figure 4, Figure 5 & Figure 6). The human
+      pose landmark gives 3D coordinate value of human body joint. We have used them in our project to extract human
+      gesture to control the robot arm.
+      </br>
+      </br>
+
+      A stepper motor (Figure 1) is an electromechanical device it converts electrical power into mechanical power.
+      Also, it is a brushless, synchronous electric motor that can divide a full rotation into an expansive number of
+      steps as showed in Figure 2. The stepper motor can be controlled by energizing every stator one by one. So, the
+      stator will magnetize & works like an electromagnetic pole which uses repulsive energy on the rotor to move
+      forward. The stator’s alternative magnetizing as well as demagnetizing will shift the rotor gradually & allows it
+      to turn through great control. Once the supply is provided to the winding of the stator then the magnetic field
+      will be developed within the stator. Now rotor in the motor will start to move with the rotating magnetic field of
+      the stator as showed in Figure 3.
+      </br>
+      </br>
+
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/3yc23vrg2v7zns2besoq7/Slide1.PNG?rlkey=lyd4orf7gcrx3xs2xvz1r4rdg&st=8xemtg6g&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+
+      <h2 id="WRA" class="default-headline-text">Workflow of The Robot Arm</h2>
+      The block diagram of this project is given in Figure 7. The computer takes input from the camera real time and
+      sends it to the MediaPipe Machine Learning (ML) model. The model gives us the 3D coordinate of the hand joints.
+      Using the coordinates, we identify the gesture and send it to the ESP-32. The ESP-32 controls the stepper motor
+      using the motor driver using the input received via the computer. Here the computer and the ESP-32 communicates
+      wirelessly via WebSocket communication protocol.
+      </br>
+      </br>
+
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/miypncxohha1oxqy95p4a/Slide2.PNG?rlkey=g97zrokjd6gk3fd4u5ag8byf7&st=a6uyglxh&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+
+
+
+
+      <h3 id="CD" class="default-headline-text">Circuit Diagram</h3>
+      The circuit diagram is given in Figure 8. We have connected the three-motor driver with the ESP32 via the
+      breadboard. We have used 12 DC, 5A power supply to poser the stepper motors as the stepper motor will draw high
+      current. To power the ESP32 with 3.3V, we have used the buck converter to step down the 12V to 3.3V. The three
+      stepper motor controls the base, Arm 1 and Arm 2 of the robot arm. The ESP32 provides control logic sequence to
+      the motor driver which power and control the three stepper motors.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/fd69pnk0qv84ov0f3qoed/Slide3.PNG?rlkey=84tom1s96kz4j7mjcuv5g9yg9&st=n47eezf6&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+      <h3 id="KF" class="default-headline-text">Control Logic</h3>
+      Figure 9, shows the gesture control logic to control the robot arm. We have taken a rectangular box, which can be
+      placed anywhere with the camera view by showing 1 by the hand. This makes the input more versatile as the box is
+      not fix to a particular position and can be anywhere when needed. If the hand is inside the rectangle box no input
+      is sent to the robot arm. If the hand is in fist mode as shown in the figure and is up or down the rectangle box
+      then the arm 1 moves up or down respectively. Similar for the arm 2, except in this case the hand should in open
+      palm mode as shown in the figure. If the hand is quickly changed from fist to open palm mode the input changes
+      accordingly. Now to rotate the base the hand can be in both fist or palm mode but it should be left or right side
+      of the rectangular box. The ESP32 will receive signal as long as the hand is outside of the rectangular box. The
+      robot arm also supports simultaneous input. It means the user can control both arm 1 and base or arm2 and base at
+      the same time. This makes the use of the robot faster and useful by giving more access.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/jbvjerfpuhadsv91i8da2/Slide4.PNG?rlkey=bejsvdwfc7ytrvxh6w9ilxjcq&st=9qpvruri&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+      <h3 id="ADC" class="default-headline-text">Actual Design & Control</h3>
+
+      Figure 10, shows the design of the actual robot arm. We have made the arm using the PVC board, Nut, Bolt and Glue.
+      The stepper motor used in the base is inside the plastic box. The base support 360-degree rotation. The arm also
+      supports full rotation and moves as long as it has place to move. The stepper motor and the robot are joined via
+      the coupler which holds them together.
+
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/57etxfe4jd9appv7rmxz3/Slide5.PNG?rlkey=lfff5nh8h697zgrwfqmg1n47e&st=wiklwhv1&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+
+      To control the robot arm we had to code for both the microcontroller and the computer. We haves used C++ to code
+      the ESP32. We have used the Accelstepper library to control the stepper motor. We have also used several network
+      libraries to create a WebSocket communication path to receive signal from the computer. We have also written html
+      code to create a web page to remotely control the robot arm by hand as shown in Figure 11. The top upper and
+      bottom lower button controls the arm 2, the button between them controls the arm 1 while the two-side button
+      controls the base movement. For a single input signal, we move 70 steps of the stepper motor. From Figure 11, we
+      see that the arm is quite flexible and can be moved almost all the areas it can reach.
+
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/k8rspk965mnmpqt5dwlu4/Slide6.PNG?rlkey=w1b0ztru1d2et2i7c5i65t88s&st=a9r971yr&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+
+      Figure 12, shows the actual proposed hand gesture control logic. We have used python to code the computer vision
+      part. The algorithm takes camera input and pass it through Mediapipe human pose prediction model that return the
+      coordinates of the hand joints relative to the screen. To activate the control the user, have to show one by their
+      hand. Then at that place a rectangular box appears which activates the control. The coordinate of the midpoint of
+      the middle finger is used to identify weather the hand is outside the cox or inside. If the hand is inside then no
+      signal is sent. To send the signal the hand must be outside the box, and the signal will be sent to the ESP32 as
+      discussed earlier using Figure 9. To completely stop sending signals to the ESP32 the user can show number four
+      using their hand to disable the control. The proposed gesture mechanism gives very easy to use control to work in
+      various filed. Any user can easily learn to use the robot arm and command it at their will.
+
+
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/n3q1wsmrhrrmrfksbrd1x/Slide7.PNG?rlkey=oproq9p77zafi5dq6xe88hm9i&st=gjausgqu&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+
+      <h2 id="TB" class="default-headline-text">Team Background</h2>
+      Our team consisted of the following members,
+      </br>
+      <ul>
+        <li><strong>Md. Johir Raihan</strong>, Electronics and Communication Engineering</li>
+        <li><strong>Jannatul Jeba</strong>, Electronics and Communication Engineering</li>
+        <li><strong>Samiya Intesar</strong>, Electronics and Communication Engineering</li>
+        <li><strong>MD Jakaria</strong>, Electronics and Communication Engineering</li>
+      </ul>
+
+
+      <h2 id="LFW" class="default-headline-text">Limitations & Future Work</h2>
+      Despite the successful implementation of the gesture-controlled robotic arm, the project had several limitations.
+      Since the human hand gestures were extracted using a Machine Learning (ML) model, occasional misidentifications in
+      hand coordination affected accuracy. The arm, constructed using a PVC board and couplers, exhibited instability in
+      movement due to material constraints. Furthermore, the use of a small stepper motor resulted in overheating under
+      heavy loads, limiting its efficiency. However, the overall movement of the robotic arm was smooth and
+      satisfactory. For future improvements, using high-performance motors would enhance load-bearing capacity, and
+      increasing the number of motors could provide additional degrees of freedom, enabling the robot to perform more
+      complex tasks.
+
+
+      <!-- image carousel start -->
+      <h2 id="event-photo" class="default-headline-text">Event Photos</h2>
+      Our project was recognized as the best in our class, marking a proud achievement. We had the honor of sharing this
+      moment with our course teacher, Professor Dr. Shamim Ahsan.
+      </br>
+      </br>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/j4hxirq1vnm7emx504t82/treat.png?rlkey=nds0yjhzos7s4gi2h2bdrbnqp&st=tkl092vv&raw=1"
+              alt="First slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- image carousel end -->
+      </br>
+      </br>
+
+      <h2 id="AI" class="default-headline-text">Additional Information</h2>
+      <a href="https://drive.google.com/file/d/1VxcMwWjlVdbj6rkc8xB9ILkVSQlnLERU/view" class="stylish-link"
+        target="_blank" rel="noopener noreferrer">1.
+        Gesture-Driven Robotic Arm Project Report - PDF</a>
+      </br>
+      <a href="https://youtu.be/x-ixVZ53XgI" class="stylish-link" target="_blank" rel="noopener noreferrer">2. Project
+        Demonstration - Youtube</a>
+      </br>
+      <!-- <a href="https://nsac.basis.org.bd/team/storm-troopers" class="stylish-link" target="_blank"
+        rel="noopener noreferrer">3. Khulna University Media Coverage - KU</a> -->
+      <h2 id="Ref" class="default-headline-text">References</h2>
+      [1] T. Agarwal, “Stepper Motor : Construction, Working, Types and Its Applications,” ElProCus
+      - Electronic Projects for Engineering Students, Oct. 24, 2013.
+      https://www.elprocus.com/stepper-motor-types-advantages-applications/ (accessed Mar. 16,
+      2023).
+      </br>
+      [2] “In-Depth: Control 28BYJ-48 Stepper Motor with ULN2003 Driver & Arduino,” Last Minute
+      </br>
+      Engineers, Dec. 22, 2019. https://lastminuteengineers.com/28byj48-stepper-motor-arduino-
+      tutorial/ (accessed Mar. 16, 2023).
+      </br>
+      [3] C. Lugaresi et al., “MediaPipe: A Framework for Building Perception Pipelines,” arXiv.org,
+      Jun. 14, 2019. https://arxiv.org/abs/1906.08172v1 (accessed Mar. 16, 2023).
+      </br>
+      [4] “MediaPipe.” https://mediapipe.dev/ (accessed Mar. 16, 2023).
+
+    </article>
+    <div style="padding-top: 250px;">
+    </div>
+    <div style="text-align: center; ">
+      <b>&copy; 2024 Md. Johir Raihan</b>
+    </div>
+  </div>
+  <!-- page content end -->
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Prism.js for syntax highlighting & copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+  <!-- KaTeX for rendering math equations -->
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+    integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <script src="scripts.js"></script>
+  <script src="topic_scripts.js"></script>
+
 </body>
 
 </html>
