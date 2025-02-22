@@ -2,163 +2,318 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Md. Johir Raihan</title>
-    <link rel="icon" href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Johir Raihan</title>
+  <link rel="icon"
+    href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1"
+    type="image/x-icon">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
-    <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="topic_style.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="icon" href="images/1.ico" type="image/x-icon">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+  <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+    rel="stylesheet">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css"
+    rel="stylesheet">
+
+  <!-- KaTeX for math equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+    integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="topic_style_second.css">
+
 
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <nav id="sidebar" class="position-fixed sidebar-color">
-        <ul class="list-unstyled components" style="font-family: Perpetua, serif; font-size: 17pt;">
-          <li>
-            <a href="index.html" class="list-group-item" id="home-tab" onclick="showContent('home'); hideSidebar()">
-              <img src="icons/1.png" class="sidebar-img" alt="Home Icon" width="24" height="24">
-              Home</a>
-          </li>
-          <li>
-            <a href="publication.html" class="list-group-item" id="publication-tab"
-              onclick="showContent('publication'); hideSidebar()"><img src="icons/2.png" class="sidebar-img" alt="Home Icon" width="24"
-                height="24"> Publications</a>
-          </li>
-          <li>
-            <a href="project.html" class="list-group-item" id="project-tab"
-              onclick="showContent('project'); hideSidebar()"><img src="icons/3.png" class="sidebar-img" alt="Home Icon" width="24" height="24">
-              Projects</a>
-          </li>
-          <li>
-            <a href="achievements.html" class="list-group-item" id="achievements-tab"
-              onclick="showContent('achievements'); hideSidebar()"><img src="icons/4.png" class="sidebar-img" alt="Home Icon" width="24"
-                height="24">Achievements</a>
-          </li>
-          <li>
-            <a href="references.html" class="list-group-item" id="references-tab"
-              onclick="showContent('references'); hideSidebar()"><img src="icons/6.svg" class="sidebar-img" alt="Home Icon" width="24"
-                height="24">References</a>
-          </li>
-          <li>
-            <a href="https://drive.google.com/file/d/1nknOufa4i5EBhHDoEhVQZFoGmJ8rYBeE/view?usp=drive_link"
-              class="list-group-item" id="resume-tab" onclick="hideSidebar()"><img src="icons/5.png" class="sidebar-img" alt="Home Icon"
-                width="24" height="24">
-              Resume</a>
-          </li>
-        </ul>
-      </nav>
-    
-    
-      <div class="color-bar">
-        <p style="font-family: 'Writing Signature', cursive; ">Md. Johir Raihan</p>
+
+  <!-- sidebar start -->
+  <div id="sidebar-common-container"></div>
+  <!-- sidebar end -->
+
+  <!-- Page Initial start -->
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle">
+    <i class="fas fa-bars"></i>
+    <!-- hamberger bar -->
+
+  </div>
+
+  <!-- Close Menu Button (Added) -->
+  <div id="menu-close" style="display: none;">
+    <i class="fas fa-times"></i>
+  </div>
+
+  <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </div>
+  <!-- Page Initial end -->
+
+  <!-- toc start -->
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul id="toc-list"></ul>
+  </nav>
+  <!-- toc end -->
+
+  <!-- page content start -->
+  <div class="page-start">
+    <div class="header">
+      <h1>Automated Hand Exercise Machine</h1>
+      <div style="padding-top: 20px;">
       </div>
-
-    <!-- Page Content -->
-    <div id="content">
-
-        <!-- Hamburger Menu -->
-        <div id="menu-toggle">
-            <i class="fas fa-bars"></i>
-            <!-- hamberger bar -->
-
-        </div>
-
-        <!-- Close Menu Button (Added) -->
-        <div id="menu-close" style="display: none;">
-            <i class="fas fa-times"></i>
-        </div>
-
-        <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
-            <i class="fas fa-moon"></i>
-        </div>
-
-
-
-        <div><br>
-        </div>
-        <div class=" col-md-8 mx-auto" style="font-family: 'GFS Didot'">
-            <h3 class="card-title" style=" font-family: 'Lato', sans-serif; ">Automated Hand Exercise Machine with
-                Monitoring System for Paralysis Patients.</h3>
-
-            <p style="font-size: 16px;line-height: 1.5;">
-                <b><a href="index.html">Md. Johir Raihan</a> </b>|
-                <b>25 Sept 2023</b> |
-                <b>&copy; 2023 Md. Johir Raihan</b>
-                <br>
-            </p>
-
-            <div style="text-align: center;">
-                <img class="img_content" src="https://www.dropbox.com/scl/fi/vin166xo8xknv1697udku/4.gif?rlkey=c468s92rw096mf3r52ts1y3yr&raw=1">
-            </div>
-            <br>
-
-
-            <p style="font-size: 18px;line-height: 1.5;">
-                <b>Title:</b> Automated Hand Exercise Machine with Monitoring System for Paralysis Patients.<br>
-                <b>Creators:</b> <strong>Md. Johir Raihan</strong>, Md. Irfan Hussain Sikder, Swaraj Mondal<br>
-                <!-- <b>Achivement:</b> <span style="color: red;">1st position (Champion) Award</span> <br> -->
-                <!-- <b>Materials:</b> <a href="https://ieeexplore.ieee.org/document/9564240">Paper Link </a> | Google Drive <br> -->
-                <br>
-            </p>
-
-            <h2>Presentation Video</h2>
-            <div class="vid_content">
-                <iframe width="1168" height="657" src="https://www.youtube.com/embed/tgaQillNLy8"
-                    title="Automated Hand Exercise Machine with Monitoring System for Paralysis Patient" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <br>
-
-            <h2>Abstract</h2>
-            <p style="font-size: 18px; text-align: justify; line-height: 1.5;"> Here, we have described the
-                details of the project. We have divided the whole project
-                into three main parts, those are hardware, circuit diagram and software parts. In the hardware parts
-                we have setup the motor with the human body. To do that we have designed a motor shaft to attach
-                a lather from the wrist to that motor shaft. Next to keep the motor attach into a block box we have
-                designed a motor mount that attaches the motor to the box. Also, to keep the box attach to the
-                human shoulder we designed an outfit using lather that attaches the box to the shoulder as shown
-                in the Figure. We have used a rubber finger gripper to keep the heart rate sensor attach to the
-                fingertip. In the circuit part, we have designed a circuit diagram to read the value from the heart
-                rate sensor and to control the motor. An Arduino has been used as the microcontroller to connect
-                all the electrical component. The motor driver has been used to control the motor direction and
-                speed. A Bluetooth device has been connected to the microcontroller to read and send data from
-                and to the computer. In the software part, we send the heart rate sensor data to the computer via
-                Bluetooth and receive the motor control input from the computer. To make the hand exercise
-                automatic we had to detect weather the hand is in down position or in up position. To achieve that
-                we have implemented a pose detection algorithm using the MediaPipe library from google. The
-                pose detection algorithm gives us the human body joint land mark data using which we have
-                extracted the shoulder, elbow and wrist land mark value. Further we have used these values to
-                calculate angle between the biceps and forearm and using the angle we determine whether the hand
-                is in down position or up position. If the hand is in down position a command is send to the
-                microcontroller to use the motor so that the motor pick ups the hand. As the hand is in up position
-                another command is seed to the microcontroller to cut the power to the motor. At this point the
-                patient can apply force to bring the hand down to lower position. This process continues and the
-                patient gets an automatic hand exercise. Further we have built interface to count the number hand
-                exercise and show them in real-time in a window along with the patient’s heart rate data. This
-                shows the health condition of the patient as he continuous to do the exercise.</p>
-
-        </div>
-
-        <!-- conent end -->
+      <img src="https://www.dropbox.com/scl/fi/vin166xo8xknv1697udku/4.gif?rlkey=c468s92rw096mf3r52ts1y3yr&raw=1"
+        alt="Header Image">
     </div>
 
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
+    <button class="toc-toggle" onclick="toggleTOC()">☰</button>
+    Automated Hand Exercise Machine with Monitoring System for Paralysis Patients.
+
+
+    <div style="padding-top: 50px;">
+    </div>
+
+    <article class="default-topic-text">
+      <h2 id="B" class="default-headline-text">Background</h2>
+      Paralysis is a severe medical condition that affects millions of people worldwide, restricting their ability to
+      move and perform daily activities. According to a study conducted in 2013, approximately 5.4 million people live
+      with paralysis, with a significant proportion being younger than 65 years old. Among the leading causes of
+      paralysis, strokes account for 33.7% of cases, followed by spinal cord injuries at 27.3% and multiple sclerosis at
+      18.6%.
+      </br>
+      </br>
+      Over the years, technological advancements have provided several rehabilitation solutions for individuals
+      suffering from paralysis. For instance, Vijay Kumar et al. developed a patient monitoring system that allows
+      disabled individuals to display messages on an LCD screen through simple hand movements. Similarly, Ahmed Roshdy
+      et al. introduced a wearable exoskeleton rehabilitation device to assist paralysis patients. Inspired by such
+      advancements, we have developed an Automated Hand Exercise Machine with a Monitoring System to aid in the
+      rehabilitation of individuals with hand paralysis. Our device is cost-effective and ensures a structured hand
+      exercise regimen, essential for regaining mobility and improving overall muscle function.
+      </br>
+      </br>
+      <div class="vid_content">
+        <iframe width="1168" height="657" src="https://www.youtube.com/embed/tgaQillNLy8"
+          title="Automated Hand Exercise Machine with Monitoring System for Paralysis Patient" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      </br>
+      </br>
+
+      <h2 id="HD" class="default-headline-text">Hardware Design</h2>
+      The core functionality of our device revolves around a 400-RPM gear motor, which assists in lifting the patient’s
+      hand from a resting position. The mechanism is engineered to ensure safe and controlled movement, preventing
+      excessive force that could cause discomfort or injury. The motor mechanism consists of a 400-RPM gear motor that
+      gently pulls up the hand, a custom-designed shaft optimized for movement, and a rolling mechanism with a 1-inch
+      leather rope, where one end is attached to the motor shaft and the other to a wristband.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/2ekq8fu13epj0oxznrlo2/Slide1.PNG?rlkey=fju8957b0bf2nulthglp9vz1a&st=0j9etwmg&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+      To ensure safety and stability, the entire motor assembly is enclosed within a protective white box to prevent
+      malfunctions and ensure patient safety. A motor mount is specifically designed to secure the motor inside the box,
+      while a leather outfit is developed to stabilize the system, providing extra grip and comfort to the patient. The
+      wrist support and sensors further enhance the system’s functionality. A wrist mechanism is included to provide
+      proper hand support, while a heart rate sensor is attached to the index finger to continuously monitor heart rate
+      during exercise. All electrical wiring is routed to a central setup box housing the microcontroller and other
+      essential components.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/hcr69y8yvbpqionhuhy3m/Slide2.PNG?rlkey=9ykyuhx0ndbh9d3sa81jdqw36&st=ipf0ajxv&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+      <h2 id="CD" class="default-headline-text">Circuit Design</h2>
+      Our system is powered by an Arduino UNO, which serves as the main controller. It processes sensor data and
+      controls the motor based on predefined threshold angles. The circuit consists of an Arduino UNO that processes
+      commands and controls the entire system, a motor driver that regulates motor movement based on input signals, a
+      Bluetooth module that enables wireless communication with the system, and a heart rate sensor that continuously
+      monitors the patient's heart rate. The power supply provides the necessary voltage and current to the system
+      components. The following diagram illustrates the circuit connections and how each component interacts to ensure
+      smooth operation.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/97zm31qqpy9voozudqc29/Slide3.PNG?rlkey=vq8typw6wnm2vam1sd8z61g07&st=fqojdgh4&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+
+      <h2 id="WP" class="default-headline-text">Working Principle</h2>
+      The system operates based on the angular position of the forearm and biceps. The software continuously monitors
+      this angle and decides when to activate or deactivate the motor. If the angle between the forearm and biceps is
+      less than 160°, the system detects that the hand is in a resting position, and the software sends a command to the
+      microcontroller to activate the motor. The motor then pulls up the hand until the forearm-biceps angle reaches 32°
+      (considered the top position). At this point, the software sends a command to stop the motor, and the subject
+      deliberately lowers their hand back to the resting position.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/i5gdhyoaw0bsvimj9oa5e/Slide4.PNG?rlkey=jof7grsi2hqkv3auoefkm2jt3&st=idh9sb82&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+      Real-time monitoring plays a crucial role in this process. The heart rate sensor continuously records heart rate
+      and blood pressure, displaying the values on a screen. The software counts the number of repetitions and logs the
+      data for tracking progress. Users can configure the threshold angles through a control panel for personalized
+      exercise settings. This automated approach ensures that patients perform the required hand exercises consistently
+      and accurately.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/rucwq8fad7rwp1l5k1pkt/Slide5.PNG?rlkey=eival3zqzvt1m0efa9m9m3zdv&st=hpoqjcja&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+
+
+      <h2 id="BFS" class="default-headline-text">Benefits and Future Scope</h2>
+      This device is cost-effective, ensuring affordability compared to traditional therapy sessions and high-end
+      exoskeleton systems. The system is designed for ease of use, making it accessible even to patients with minimal
+      technical knowledge. Customizable exercise parameters allow the threshold angles to be configured to suit
+      individual patient needs, providing personalized therapy. The integration of heart rate and blood pressure
+      monitoring ensures safe exercise sessions by alerting users to abnormal readings.
+      </br>
+      </br>
+      While our current system effectively assists in hand movement rehabilitation, we aim to introduce further
+      enhancements. We plan to develop a similar mechanism for individual finger exercises, allowing more comprehensive
+      hand therapy. To reduce costs and improve availability, we will redesign parts using 3D printing technology.
+      Simplifying the outfit design is another priority so that patients can easily wear and adjust the system without
+      assistance.
+
+      <h2 id="conclusion" class="default-headline-text">Conclusion</h2>
+      The Automated Hand Exercise Machine with a Monitoring System is a significant step forward in paralysis
+      rehabilitation. It provides a structured, automated, and affordable solution for hand exercises, ensuring
+      consistent therapy sessions without the need for constant supervision. By integrating mechanical automation,
+      real-time health monitoring, and customizable exercise settings, our system empowers patients to regain control
+      over their hand movements, enhancing their independence and quality of life.
+      </br>
+
+      <h2 id="step_25" class="default-headline-text">Additional Information</h2>
+      <a href="https://youtu.be/hNnHTisxkPQ" class="stylish-link" target="_blank" rel="noopener noreferrer">1.
+        Project Demonstration - Youtube</a>
+      </br>
+
+    </article>
+    <div style="padding-top: 250px;">
+    </div>
+    <div style="text-align: center; ">
+      <b>&copy; 2023 Md. Johir Raihan</b>
+    </div>
+  </div>
+  <!-- page content end -->
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Prism.js for syntax highlighting & copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+  <!-- KaTeX for rendering math equations -->
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+    integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <script src="scripts.js"></script>
+  <script src="topic_scripts.js"></script>
+
+  <!-- <script>
+    function toggleTOC() {
+      document.querySelector(".toc").classList.toggle("show");
+    }
+
+    const tocList = document.getElementById('toc-list');
+    const headings = document.querySelectorAll('article h2, article h3');
+    let lastH2 = null;
+
+    headings.forEach(heading => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#${heading.id}`;
+      a.textContent = heading.textContent;
+
+      if (heading.tagName === 'H2') {
+        li.appendChild(a);
+        tocList.appendChild(li);
+        lastH2 = li;
+      } else if (heading.tagName === 'H3' && lastH2) {
+        let subList = lastH2.querySelector('ul');
+        if (!subList) {
+          subList = document.createElement('ul');
+          lastH2.appendChild(subList);
+        }
+        const subItem = document.createElement('li');
+        subItem.appendChild(a);
+        subList.appendChild(subItem);
+      }
+    });
+
+    // IntersectionObserver for active section
+    const tocLinks = document.querySelectorAll('.toc a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const tocLink = document.querySelector(`a[href="#${entry.target.id}"]`);
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => link.classList.remove('active'));
+          tocLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    headings.forEach(heading => observer.observe(heading));
+
+    // Smooth scrolling
+    document.querySelectorAll('.toc a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script> -->
 </body>
 
 </html>

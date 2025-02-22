@@ -2,170 +2,311 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Md. Johir Raihan</title>
-    <link rel="icon" href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Johir Raihan</title>
+  <link rel="icon"
+    href="https://www.dropbox.com/scl/fi/3ygdgrjjwg9qdrilvgna9/1.ico?rlkey=99w2nfagwrz5t3sp2k12vrf4d&raw=1"
+    type="image/x-icon">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
-    <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="topic_style.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+  <link href="https://fonts.cdnfonts.com/css/writing-signature" rel="stylesheet">
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+    rel="stylesheet">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css"
+    rel="stylesheet">
+
+  <!-- KaTeX for math equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+    integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="topic_style_second.css">
+
 
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <nav id="sidebar" class="position-fixed sidebar-color">
-        <ul class="list-unstyled components" style="font-family: Perpetua, serif; font-size: 17pt;">
-          <li>
-            <a href="index.html" class="list-group-item" id="home-tab" onclick="showContent('home'); hideSidebar()">
-              <img src="icons/1.png" class="sidebar-img" alt="Home Icon" width="24" height="24">
-              Home</a>
-          </li>
-          <li>
-            <a href="publication.html" class="list-group-item" id="publication-tab"
-              onclick="showContent('publication'); hideSidebar()"><img src="icons/2.png" class="sidebar-img" alt="Home Icon" width="24"
-                height="24"> Publications</a>
-          </li>
-          <li>
-            <a href="project.html" class="list-group-item" id="project-tab"
-              onclick="showContent('project'); hideSidebar()"><img src="icons/3.png" class="sidebar-img" alt="Home Icon" width="24" height="24">
-              Projects</a>
-          </li>
-          <li>
-            <a href="achievements.html" class="list-group-item" id="achievements-tab"
-              onclick="showContent('achievements'); hideSidebar()"><img src="icons/4.png" class="sidebar-img" alt="Home Icon" width="24"
-                height="24">Achievements</a>
-          </li>
-          <li>
-            <a href="references.html" class="list-group-item" id="references-tab"
-              onclick="showContent('references'); hideSidebar()"><img src="icons/6.svg" class="sidebar-img" alt="Home Icon" width="24"
-                height="24">References</a>
-          </li>
-          <li>
-            <a href="https://drive.google.com/file/d/1nknOufa4i5EBhHDoEhVQZFoGmJ8rYBeE/view?usp=drive_link"
-              class="list-group-item" id="resume-tab" onclick="hideSidebar()"><img src="icons/5.png" class="sidebar-img" alt="Home Icon"
-                width="24" height="24">
-              Resume</a>
-          </li>
-        </ul>
-      </nav>
-    
-    
-      <div class="color-bar">
-        <p style="font-family: 'Writing Signature', cursive; ">Md. Johir Raihan</p>
+
+  <!-- sidebar start -->
+  <div id="sidebar-common-container"></div>
+  <!-- sidebar end -->
+
+  <!-- Page Initial start -->
+  <!-- Hamburger Menu -->
+  <div id="menu-toggle">
+    <i class="fas fa-bars"></i>
+    <!-- hamberger bar -->
+
+  </div>
+
+  <!-- Close Menu Button (Added) -->
+  <div id="menu-close" style="display: none;">
+    <i class="fas fa-times"></i>
+  </div>
+
+  <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </div>
+  <!-- Page Initial end -->
+
+  <!-- toc start -->
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul id="toc-list"></ul>
+  </nav>
+  <!-- toc end -->
+
+  <!-- page content start -->
+  <div class="page-start">
+    <div class="header">
+      <h1>Rehabilitation Exercise Assessment</h1>
+      <div style="padding-top: 20px;">
       </div>
-
-    <!-- Page Content -->
-    <div id="content">
-
-        <!-- Hamburger Menu -->
-        <div id="menu-toggle">
-            <i class="fas fa-bars"></i>
-            <!-- hamberger bar -->
-
-        </div>
-
-        <!-- Close Menu Button (Added) -->
-        <div id="menu-close" style="display: none;">
-            <i class="fas fa-times"></i>
-        </div>
-
-        <div id="toggleDarkMode" aria-label="Toggle Dark Mode">
-            <i class="fas fa-moon"></i>
-        </div>
-
-
-
-        <div><br>
-        </div>
-        <div class=" col-md-8 mx-auto" style="font-family: 'GFS Didot'">
-            <h3 class="card-title" style=" font-family: 'Lato', sans-serif; ">Automated Rehabilitation Exercise
-                Assessment by Genetic Algorithm-optimized CNN</h3>
-
-            <p style="font-size: 16px;line-height: 1.5;">
-                <b><a href="index.html">Md. Johir Raihan</a> </b>|
-                <b>25 Sept 2023</b> |
-                <b>&copy; 2023 Md. Johir Raihan</b>
-                <br>
-            </p>
-
-            <div style="text-align: center;">
-                <img class="img_content" src="https://www.dropbox.com/scl/fi/tzkjthyt6lcj3k5afrmt4/8.jpg?rlkey=pfr4kt2n5kqe59ascbthg9qlt&raw=1">
-            </div>
-            <br>
-            <!-- <iframe src="https://docs.google.com/presentation/d/1pI5fALTu2_Zasv54f4o7_vdvpkDM1qWA/preview?hl=en" width="600" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> -->
-            <p style="font-size: 18px;line-height: 1.5;">
-                <b>Title:</b> <a href="https://ieeexplore.ieee.org/document/9564240">Automated Rehabilitation Exercise
-                    Assessment by Genetic Algorithm-optimized CNN</a><br>
-                <b>Authors:</b> <strong>Md. Johir Raihan</strong>, M. A. R. Ahad, and A.-A. Nahid<br>
-                <b>Achivement:</b> <span style="color: red;">Best Paper Award (1st position)</span> <br>
-                <b>Materials:</b> <a href="https://ieeexplore.ieee.org/document/9564240">Paper Link </a> | Google Drive
-                <br>
-            </p>
-            <h2>Presentation Video</h2>
-            <div class="vid_content">
-                <iframe src="https://www.youtube.com/embed/JL35XAsR4Rk"
-                    title="Automated Rehabilitation Exercise Assessment by Genetic Algorithm-optimized CNN"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <br>
-
-            <h2>Abstract</h2>
-            <p style="font-size: 18px; text-align: justify; line-height: 1.5;"> Every year, the number of motor
-                dysfunction
-                patients has been rising. These patients require physical therapy
-                and continuous observation and assessment of their exercises by
-                a professional therapist. This process can take a longer time,
-                leading to a staff shortage and increasing financial costs. Thus,
-                a reliable rehabilitation framework is necessary to assess these
-                exercises as precisely as possible. In this paper, we have
-                proposed an exercise assessment framework using the 1D Local
-                Binary Pattern (LBP) to extract valuable features from skeleton
-                data and a genetic algorithm (GA) optimized Convolutional
-                Neural Network (CNN) to predict the score. The KIMORE
-                dataset has been used in this study. We have achieved 0.0165
-                Mean Absolute Deviation (MAD) on the training set and
-                0.13515 on the validation set.</p>
-
-            <h2>My Contribution</h2>
-            <p style="font-size: 18px; text-align: justify; line-height: 1.5;">I developed a robust rehabilitation
-                framework
-                to assess motor dysfunction patients' exercises with high
-                precision,
-                addressing the challenge of time-consuming and labor-intensive evaluations. This framework utilizes a
-                novel
-                combination of 1D Local Binary Pattern (LBP) for feature extraction from skeleton data and a
-                Convolutional
-                Neural Network (CNN) optimized by Genetic Algorithm (GA) to predict exercise scores.</p>
-
-            <h2>Closing Ceremony Video</h2>
-            <div class="vid_content">
-                <iframe width="1168" height="657" src="https://www.youtube.com/embed/BIbmfmhscCg"
-                    title="ICIEV-IVPR Keynote: Social Augmented Reality Interactions, Anton Nijholt, U Twente &amp; AWARD ceremony"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <!-- conent end -->
+      <img
+        src="https://www.dropbox.com/scl/fi/bt3krx6grv3u7irxpzncy/1.jpg?rlkey=rbmgdhdswo06gf8hybop6pi3u&st=n1uppe1u&raw=1"
+        alt="Header Image">
     </div>
 
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
+    <button class="toc-toggle" onclick="toggleTOC()">☰</button>
+    Automated Rehabilitation Exercise Assessment by Genetic Algorithm-optimized CNN
+
+
+    <div style="padding-top: 50px;">
+    </div>
+
+    <article class="default-topic-text">
+      <h2 id="B" class="default-headline-text">Background</h2>
+      Neurodegenerative disorders like Parkinson's Disease (PD) and stroke significantly impact motor function,
+      affecting millions of people worldwide. With over 6 million individuals living with PD and more than 80 million
+      people having experienced a stroke, the need for effective rehabilitation is critical. Physical therapy plays a
+      vital role in recovery, helping patients regain movement through exercises like trunk rotation, squatting, and
+      knee extensions. However, traditional rehabilitation requires continuous clinician supervision, making it
+      resource-intensive and often impractical, especially for long-term therapy. The growing shift towards home-based
+      rehabilitation, accelerated by the COVID-19 pandemic, has highlighted the need for automated assessment frameworks
+      to ensure accurate exercise evaluation while reducing healthcare costs. By integrating artificial intelligence
+      with motion analysis, an automated system can provide objective assessments, minimize clinician workload, and make
+      rehabilitation more accessible and scalable. This study presents an innovative framework that leverages 1D Local
+      Binary Pattern (LBP) for feature extraction and a Genetic Algorithm (GA)-optimized Convolutional Neural Network
+      (CNN) to predict exercise quality, offering a cost-effective and efficient solution for remote rehabilitation.
+
+      </br>
+      </br>
+      <div class="vid_content">
+        <iframe src="https://www.youtube.com/embed/JL35XAsR4Rk"
+          title="Automated Rehabilitation Exercise Assessment by Genetic Algorithm-optimized CNN" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      </br>
+      </br>
+
+      <h2 id="W" class="default-headline-text">Workflow</h2>
+      The workflow begins with processing the publicly available KIMORE dataset, which is particularly valuable for
+      developing and evaluating AI-based rehabilitation assessment models. What sets this dataset apart is its inclusion
+      of both healthy individuals and patients suffering from stroke, back pain, and Parkinson’s disease. This diversity
+      ensures that the model is trained and tested on a realistic distribution of subjects, making it more robust and
+      generalizable to real-world clinical applications. The dataset includes a total of 78 subjects, with 44 healthy
+      individuals and 34 patients performing five different rehabilitation exercises, providing a well-balanced
+      foundation for training and evaluating the model in real-world rehabilitation scenarios.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/zzra3wbjqubqwiaojq2qz/Slide1.PNG?rlkey=im0zt0x553bb6i1qvn6jvh2pz&st=4vjyw7t8&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+      Following this, feature extraction is performed using the 1D Local Binary Pattern (LBP) method. The extracted
+      features are then fed into a Convolutional Neural Network (CNN) that has been optimized using a Genetic Algorithm
+      (GA). The CNN predicts an exercise quality score, allowing clinicians to track a patient’s rehabilitation progress
+      over time. Finally, performance evaluation is conducted using metrics such as Mean Absolute Deviation (MAD) to
+      ensure model reliability. The automated nature of this process minimizes manual assessment efforts while
+      maintaining high accuracy in exercise evaluation.
+
+      <h2 id="KF" class="default-headline-text">Feature Extraction</h2>
+      Feature extraction is a crucial step in processing raw movement data into meaningful information for exercise
+      assessment. We employ 1D Local Binary Pattern (LBP), a method known for its ability to capture local variations in
+      time-series data. This technique involves selecting a sliding window over the motion signal and comparing each
+      data point with its neighboring values. Based on this comparison, a binary code is generated for each segment of
+      the motion sequence, effectively encoding movement patterns.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/8tsdixq7s9uuvwvi8sr18/Slide2.PNG?rlkey=wwtn1t4xpnp9jv7n4m2uinxug&st=exqyndv1&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+      As illustrated in the extracted figure, the 1D LBP method efficiently transforms motion signals into binary
+      patterns that highlight significant changes in joint movement. This process ensures that fine-grained motion
+      variations are preserved, making it highly effective for rehabilitation exercises, where even minor changes in
+      movement patterns can indicate progress or potential issues. By converting raw motion signals into structured
+      features, we enable the CNN to better learn movement trends and improve assessment accuracy.
+
+      <h2 id="TBA" class="default-headline-text">Model Optimization</h2>
+      The model's ability to accurately assess rehabilitation exercises relies heavily on optimizing the CNN
+      architecture. Instead of relying on manually selected hyperparameters, we employ a Genetic Algorithm (GA) to
+      automatically tune the CNN’s structure and parameters. GA, inspired by the principles of natural selection,
+      iteratively evolves the model by selecting the best-performing configurations and refining them over multiple
+      generations.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/luxbobfh69cupdyye99at/Slide3.PNG?rlkey=1i8lihoev15nk168qfrpjxfxp&st=k3h5mg0e&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+      The CNN is structured with three key layers: convolutional layers, pooling layers, and dense layers. The Genetic
+      Algorithm searches for the best combination of filters, kernel sizes, pooling strategies, and dropout rates to
+      minimize error. As shown in the CNN architecture diagram, the optimization process results in a model with
+      fine-tuned filter sizes, kernel dimensions, and stride values, improving its ability to capture motion
+      intricacies.
+      </br>
+      </br>
+      The fitness evolution graph demonstrates how Mean Absolute Deviation (MAD) decreases over generations, proving
+      that the optimization process leads to a better-performing model. The final CNN architecture, optimized by GA,
+      achieves lower MAD values on training and testing datasets, ensuring it generalizes well to unseen rehabilitation
+      exercises.
+
+      <h2 id="R" class="default-headline-text">Results</h2>
+      The model’s performance is evaluated based on its ability to accurately predict exercise quality scores. The
+      training and validation loss graphs (previous figure) illustrate how the optimized CNN achieves a steady reduction
+      in error,
+      indicating that it effectively learns meaningful movement patterns. The scatter plot
+      comparing predicted and true scores further highlights the model's accuracy, showing a close correlation between
+      ground truth and predictions.
+      </br>
+      </br>
+      <div class="topic-image-container">
+        <img
+          src="https://www.dropbox.com/scl/fi/gi1zmm3gyvrb9m8yh0iqr/Slide4.PNG?rlkey=od6etpayyk1pxyl2ccfa6a4ao&st=nl1o2x2b&raw=1"
+          alt="Centered Image">
+      </div>
+      </br>
+      </br>
+
+      <h2 id="BFS" class="default-headline-text">Benefits and Future Scope</h2>
+      This automated exercise assessment framework offers several advantages. By replacing manual evaluation with
+      AI-driven automation, it significantly reduces the workload of clinicians, allowing them to focus on patient care
+      rather than tedious assessments. In the future, integrating real-time feedback mechanisms will enable adaptive
+      exercise recommendations, allowing patients to adjust their therapy sessions dynamically. The implementation of
+      multi-objective optimization techniques could further refine CNN hyperparameters, improving both accuracy and
+      computational efficiency.
+
+      <!-- image carousel start -->
+      <h2 id="event-photo" class="default-headline-text">Event Photos</h2>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/fjgjyj7wv5aon515xw5sw/1.png?rlkey=73g3j84m5nxiycwutmk6r26q3&st=fymvugbs&raw=1"
+              alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/xfme8ad6rf9d6104d8g7u/2.png?rlkey=l1d2imrt3i75sqox7q14strp8&st=6xax22i4&raw=1"
+              alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/k5sxsa92mrfk8r6hv53e3/3.png?rlkey=kxlp7pcisagqn2b6spw1rksj6&st=gh5hcomc&raw=1"
+              alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100"
+              src="https://www.dropbox.com/scl/fi/f3w9qqxinfbzbolll35il/4.png?rlkey=vpubwr8slcksknfjxkyc297gp&st=vx5o9wb8&raw=1"
+              alt="Fourth slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- image carousel end -->
+
+      <h2 id="step_25" class="default-headline-text">Additional Information</h2>
+      <a href="https://drive.google.com/file/d/1Wa2eh3Y-M3LUztKlEOSrM6uQh7iEF4fh/view" class="stylish-link"
+        target="_blank" rel="noopener noreferrer">1.
+        Automated Rehabilitation Exercise Assessment by Genetic Algorithm-optimized CNN - Paper</a>
+      </br>
+      <a href="https://youtu.be/BIbmfmhscCg" class="stylish-link" target="_blank" rel="noopener noreferrer">2. 2021
+        Joint 10th ICIEV and 2021 5th icIVPR Prize Giving Ceremony - Youtube</a>
+      </br>
+      <a href="https://youtu.be/JL35XAsR4Rk" class="stylish-link" target="_blank" rel="noopener noreferrer">3.
+        Presentation - Youtube</a>
+      </br>
+      <a href="https://ieeexplore.ieee.org/document/9564240" class="stylish-link" target="_blank"
+        rel="noopener noreferrer">4. 2021 Joint 10th ICIEV and 2021 5th icIVPR Website</a>
+      </br>
+
+      <!-- <a href="https://nsac.basis.org.bd/team/storm-troopers" class="stylish-link" target="_blank"
+        rel="noopener noreferrer">3. Khulna University Media Coverage - KU</a> -->
+
+    </article>
+    <div style="padding-top: 250px;">
+    </div>
+    <div style="text-align: center; ">
+      <b>&copy; 2023 Md. Johir Raihan</b>
+    </div>
+  </div>
+  <!-- page content end -->
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Prism.js for syntax highlighting & copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+  <!-- KaTeX for rendering math equations -->
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+    integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <script src="scripts.js"></script>
+  <script src="topic_scripts.js"></script>
 </body>
 
 </html>
