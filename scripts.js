@@ -1,32 +1,32 @@
 // zoom in scroll start
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   AOS.init({
-      duration: 500,
-      // once: true 
+    duration: 500,
+    // once: true 
   });
 });
 
 let scrollRef = 0;
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   scrollRef <= 10 ? scrollRef++ : AOS.refresh();
 });
 // zoom in scroll end
 
 // carousel start
-document.addEventListener('DOMContentLoaded', function () {
-  var splide = new Splide('#image-carousel', {
-    type      : 'loop',      // Carousel mode
-    perPage   : 1,           // Show 1 image at a time
-    autoplay  : true,        // Enable autoplay
-    interval  : 3000,        // Delay between transitions (3 seconds)
-    pauseOnHover: true,      // Pause autoplay on mouse hover
-    arrows    : true,        // Show manual arrows for next/prev control
-    pagination: true,        // Show pagination (dots for each slide)
-  });
+// document.addEventListener('DOMContentLoaded', function () {
+//   var splide = new Splide('#image-carousel', {
+//     type      : 'loop',      // Carousel mode
+//     perPage   : 1,           // Show 1 image at a time
+//     autoplay  : true,        // Enable autoplay
+//     interval  : 3000,        // Delay between transitions (3 seconds)
+//     pauseOnHover: true,      // Pause autoplay on mouse hover
+//     arrows    : true,        // Show manual arrows for next/prev control
+//     pagination: true,        // Show pagination (dots for each slide)
+//   });
 
-  splide.mount();
-});
+//   splide.mount();
+// });
 // carousel end
 
 // active tab sign start
@@ -206,7 +206,7 @@ function initializeScrollButtons(containerId, leftBtnId, rightBtnId) {
   const mini_container = document.getElementById(containerId);
   const mini_leftBtn = document.getElementById(leftBtnId);
   const mini_rightBtn = document.getElementById(rightBtnId);
-  
+
   // Amount to scroll (width of card + gap)
   const scrollAmount = 316; // 300px card width + 16px gap
 
@@ -234,7 +234,7 @@ function initializeScrollButtons(containerId, leftBtnId, rightBtnId) {
 
   // Listen for scroll events to update button states
   mini_container.addEventListener('scroll', updateButtonStates);
-  
+
   // Initial button state update
   updateButtonStates();
 
@@ -247,4 +247,42 @@ initializeScrollButtons('scrollContainer1', 'leftBtn1', 'rightBtn1');
 initializeScrollButtons('scrollContainer2', 'leftBtn2', 'rightBtn2');
 // mini card end
 
+
+// highlight horizontal card start
+
+document.querySelectorAll('.highlight-carousel-wrapper').forEach(carousel => {
+
+  const highlightScrollContainer = carousel.querySelector('.highlight-scroll-container'); // Fixed selector
+  const highlightLeftButton = carousel.querySelector('.highlight-scroll-button.left'); // Fixed selector
+  const highlightRightButton = carousel.querySelector('.highlight-scroll-button.right'); // Fixed selector
+  const highlightCardContainer = carousel.querySelector('.highlight-card-container'); // Needed for scrolling logic
+
+  if (!highlightScrollContainer || !highlightLeftButton || !highlightRightButton || !highlightCardContainer) {
+    console.error('Missing elements in carousel:', carousel);
+    return; // Stop execution if elements are missing
+  }
+
+  function scrollCards(direction) {
+    const highlightCard = carousel.querySelector('.highlight-card');
+    if (!highlightCard) return;
+
+    const highlightCardStyle = window.getComputedStyle(highlightCard);
+    const highlightCardWidth = highlightCard.offsetWidth + parseInt(highlightCardStyle.marginRight);
+    const highlightCurrentScroll = highlightScrollContainer.scrollLeft;
+    const maxScroll = highlightCardContainer.scrollWidth - highlightScrollContainer.clientWidth;
+
+    if (direction === 'right') {
+      highlightScrollContainer.scrollLeft = (highlightCurrentScroll >= maxScroll) ? 0 : highlightCurrentScroll + highlightCardWidth;
+    } else {
+      highlightScrollContainer.scrollLeft = (highlightCurrentScroll <= 0) ? maxScroll : highlightCurrentScroll - highlightCardWidth;
+    }
+  }
+
+  highlightLeftButton.addEventListener('click', () => scrollCards('left'));
+  highlightRightButton.addEventListener('click', () => scrollCards('right'));
+
+});
+
+
+// highlight horizontal card end
 
