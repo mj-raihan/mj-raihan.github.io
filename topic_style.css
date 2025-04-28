@@ -200,6 +200,14 @@ h3.default-headline-text {
 
 /* modern hyperlink end */
 
+/* carousel start */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0f1010;
+    transform: scale(1.5); 
+}
+/* carousel stop */
+
 
 /* dark mode start */
 

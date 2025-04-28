@@ -149,7 +149,7 @@ a {
 
 /* news update start */
 .news-container {
-  height: 450px;
+  height: 480px;
   /* border: 1px solid #ccc; */
   /* padding: 10px;          */
   box-shadow: 0px 4px 8px rgba(72, 72, 72, 0.1);
@@ -199,6 +199,7 @@ a {
 .news_card {
   margin-bottom: 10px;
   /* background-color: rgba(242, 223, 250, 0.403); */
+  /* height: 900px; */
   background-color: var(--common-background);
   border: none;
 }
