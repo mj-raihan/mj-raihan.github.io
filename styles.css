@@ -96,7 +96,7 @@ body {
   padding: 0.25rem 0.05rem;
   border-radius: 0.375rem;
   transition: all 0.2s ease-in-out;
-  background-color: rgba(59, 131, 246, 0.047);
+  /* background-color: rgba(59, 131, 246, 0.047); */
   /* font-weight: 500; */
 }
 
@@ -105,11 +105,18 @@ a {
 }
 
 .modern-link:hover {
-  background-color: rgba(59, 130, 246, 0.1);
+  background-color: rgba(59, 202, 246, 0.259);
   /* text-decoration: underline; */
 }
 
 /* modern hyperlink end */
+
+/* body content start */
+.body-content {
+  width: 85%; 
+  margin: 0 auto;
+}
+/* body content end */
 
 
 /* important page start */
@@ -308,12 +315,14 @@ a {
   .highlight-card {
       width: calc((100vw - 96px) / 2);
   }
+
 }
 
 @media (min-width: 1024px) {
   .highlight-card {
       width: calc((100vw - 128px) / 3);
   }
+
 }
 
 .highlight-card:hover {
@@ -346,7 +355,7 @@ a {
   padding: 0.25rem 0.5rem;
   border-radius: 0.375rem;
   transition: all 0.2s ease-in-out;
-  background-color: rgba(59, 206, 246, 0.047);
+  /* background-color: rgba(20, 20, 20, 0.047); */
   font-family: 'GFS Didot';
   /* font-weight: 500; */
 }
@@ -627,7 +636,7 @@ a {
 .card_button:hover {
   /* background-color: #ff5c16; /* Darker on hover */
   border-color: #0056b3;
-  color: #ffffff; */
+  color: #ffffff;
 }
 
 /* card end */
@@ -800,10 +809,6 @@ a {
 
 }
 
-.dark-mode .mini-card-title {
-  color: #fff;
-}
-
 .dark-mode .mini-card-text {
   color: #fff;
 }
@@ -885,6 +890,13 @@ a {
     z-index: 1001;
     opacity: 0.9;
   }
+
+  /* body content start */
+  .body-content {
+  width: 100%; 
+  margin: 0 auto;
+}
+/* body content end */
 
   /* card start */
   .default_card_text {
