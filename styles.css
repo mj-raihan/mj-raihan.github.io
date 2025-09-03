@@ -297,7 +297,7 @@ a {
 
 .highlight-card {
   width: calc(100vw - 32px);
-  max-width: 300px;
+  max-width: 380px;
   flex: 0 0 auto;
   border-radius: 12px;
   overflow: hidden;
@@ -591,6 +591,16 @@ a {
   color: #464646;
 }
 
+.progress_title {
+  font-size: 17pt;
+  /* margin-bottom: 3px;  */
+  font-family: 'GFS Didot';
+  line-height: 1.1;
+  /* margin: 2px; */
+  padding: 3px;
+  color: #464646;
+}
+
 .author_name {
   background-color: rgb(221, 221, 221);
   padding: 3px;
@@ -774,6 +784,10 @@ a {
   color: #ebebeb;
 }
 
+.dark-mode .progress_title {
+  color: #ebebeb;
+}
+
 .dark-mode .default_card_text {
   color: #ebebeb;
 }
@@ -910,6 +924,12 @@ a {
   .publication_title {
     margin-top: 10px;
     font-size: 14pt;
+    line-height: 1.1;
+  }
+
+  .progress_title {
+    margin-top: 10px;
+    font-size: 13pt;
     line-height: 1.1;
   }
 
